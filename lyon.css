@@ -1,0 +1,38 @@
+/*- Body -*/
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+/*- Carrousel -*/
+
+#carrousel{
+    position:relative;
+    height:200px;
+    width:700px;
+    margin:auto;
+}
+#carrousel ul li{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+/*- Map -*/
+
+#mapid { height: 600px; }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
