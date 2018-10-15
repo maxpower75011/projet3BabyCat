@@ -8,36 +8,39 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
    	<!-- CSS -->
     <link rel="stylesheet" href="./lyon.css">
-	<!-- API JCDecaux
-	Fichier Json qui obtient toutes les lattitudes et longitudes des vélos:
-	GET https://api.jcdecaux.com/vls/v1/stations?apiKey=0ae98a85f566e50063913e55f95b55366337fba6 -->
-	<!-- GET https://api.jcdecaux.com/vls/v1/stations?contract={contract_name}&apiKey=0ae98a85f566e50063913e55f95b55366337fba6 --> 
-  
-</head>  
-  <body>
-	  <h1>Réservez votre Velo'v à lyon</h1>
-	  
-	  <div id="carrousel">
-    	<ul>
-        <li><img src="http://lorempixel.com/700/200/" /></li>
-		<li><img src="http://lorempixel.com/g/700/200/" /></li>
-		<li><img src="http://lorempixel.com/700/200/abstract/" /></li>
-    	</ul>
-	  </div>
-	  
-	  <!-- on inclut la bibliothèque depuis les serveurs de Google -->
+        <!-- on inclut la bibliothèque depuis les serveurs de Google -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-    
+
+</head>
+  <body>
+	  <h1>Réservez votre Velo'v à lyon</h1>
+
+	  <div id="carrousel">
+    	<ul>
+        <li><img src="https://media.giphy.com/media/wHc92cHADhpLi/giphy.gif" /></li>
+        <li><img src="https://media.giphy.com/media/LZaA5gGjbUJOw/giphy.gif" /></li>
+        <li><img src="https://media.giphy.com/media/qFxlqjtA3m44U/giphy.gif" /></li>
+
+        <!-- <li><img src="http://lorempixel.com/700/200/" /></li>
+    		<li><img src="http://lorempixel.com/g/700/200/" /></li>
+    		<li><img src="http://lorempixel.com/700/200/abstract/" /></li> -->
+    	</ul>
+	  </div>
+
+
+
+
     <p>I'm your cool new webpage. Made with <a href="https://glitch.com">Velo'v</a>!</p>
 
     <div id="mapid"></div>
-    
+
    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-    
-	<canvas id="myCanvas" width="200" height="100"></canvas>  
-	  
+
+	<canvas id="myCanvas" width="200" height="100"></canvas>
+
     <script src="./lyon.js" defer></script>
-	
+    <script src="./carroussel.js" defer></script>
+
 </body>
 </html>

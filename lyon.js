@@ -1,3 +1,9 @@
+/* API JCDecaux
+    Fichier Json qui obtient toutes les lattitudes et longitudes des vélos:
+    GET https://api.jcdecaux.com/vls/v1/stations?apiKey=0ae98a85f566e50063913e55f95b55366337fba6 -->
+    <!-- GET https://api.jcdecaux.com/vls/v1/stations?contract={contract_name}&apiKey=0ae98a85f566e50063913e55f95b55366337fba6 -->
+    */
+
 //Map
 
 var mymap = L.map('mapid').setView([45.75, 4.85], 13.5);
@@ -13,76 +19,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 var marker = L.marker([51.4, -0.08]).addTo(mymap);
 var marker = L.marker([45.755, 4.85]).addTo(mymap);
-
-//Carrousel
-
-$(document).ready(function(){
-    
-var $carrousel = $('#carrousel'), // on cible le bloc du carrousel
-    $img = $('#carrousel img'), // on cible les images contenues dans le carrousel
-    indexImg = $img.length - 1, // on définit l'index du dernier élément
-    i = 0, // on initialise un compteur
-    $currentImg = $img.eq(i); // enfin, on cible l'image courante, qui possède l'index i (0 pour l'instant)
-
-$img.css('display', 'none'); // on cache les images
-$currentImg.css('display', 'block'); // on affiche seulement l'image courante
-
-$carrousel.append('<div class="controls"> <span class="prev">Precedent</span> <span class="next">Suivant</span> </div>');
-
-$('.next').click(function(){ // image suivante
-
-    i++; // on incrémente le compteur
-
-    if( i <= indexImg ){
-        $img.css('display', 'none'); // on cache les images
-        $currentImg = $img.eq(i); // on définit la nouvelle image
-        $currentImg.css('display', 'block'); // puis on l'affiche
-    }
-    else{
-        i = indexImg;
-    }
-
-});
-
-$('.prev').click(function(){ // image précédente
-
-    i--; // on décrémente le compteur, puis on réalise la même chose que pour la fonction "suivante"
-
-    if( i >= 0 ){
-        $img.css('display', 'none');
-        $currentImg = $img.eq(i);
-        $currentImg.css('display', 'block');
-    }
-    else{
-        i = 0;
-    }
-
-});
-
-function slideImg(){
-    setTimeout(function(){ // on utilise une fonction anonyme
-						
-        if(i < indexImg){ // si le compteur est inférieur au dernier index
-	    i++; // on l'incrémente
-	}
-	else{ // sinon, on le remet à 0 (première image)
-	    i = 0;
-	}
-
-	$img.css('display', 'none');
-
-	$currentImg = $img.eq(i);
-	$currentImg.css('display', 'block');
-
-	slideImg(); // on oublie pas de relancer la fonction à la fin
-
-    }, 7000); // on définit l'intervalle à 7000 millisecondes (7s)
-}
-
-slideImg(); // enfin, on lance la fonction une première fois
-
-});
-
 
 
 //Récupérer dans le fichier Json la latitude et longitude pour chacun des vélos et l'injecter dans la variable marker pour les afficher sur sur la map

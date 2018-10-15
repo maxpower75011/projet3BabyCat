@@ -13,15 +13,35 @@ h1 {
 
 #carrousel{
     position:relative;
-    height:200px;
-    width:700px;
+    height:350px;
+    width:350px;
     margin:auto;
 }
+
+#carrousel ul {
+    list-style: none;
+}
+
 #carrousel ul li{
     position:absolute;
     top:0;
     left:0;
 }
+
+
+#carrousel ul li img  {
+  margin:0 auto;
+  width:350px;
+  height:350px;
+ }
+
+.controls {
+  color: #fff;
+    display: block;
+    position: relative;
+}
+
+
 
 /*- Map -*/
 
