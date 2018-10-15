@@ -36,12 +36,13 @@ h1 {
  }
 
 .controls {
-  color: #fff;
+  	color: #fff;
     display: block;
     position: relative;
 }
-
-
+.next {
+	float: right;
+}
 
 /*- Map -*/
 
