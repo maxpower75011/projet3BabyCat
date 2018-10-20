@@ -1,10 +1,48 @@
-/* API JCDecaux
-    Fichier Json qui obtient toutes les lattitudes et longitudes des vélos:
-    GET https://api.jcdecaux.com/vls/v1/stations?apiKey=0ae98a85f566e50063913e55f95b55366337fba6 -->
-    <!-- GET https://api.jcdecaux.com/vls/v1/stations?contract={contract_name}&apiKey=0ae98a85f566e50063913e55f95b55366337fba6 -->
-    */
 
+///////////
+///////////
+///////////
+//Code JC Decaux
+///////////
+///////////
+///////////
+///////////
+///////////
+///////////
+
+var url = 'https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=0ae98a85f566e50063913e55f95b55366337fba6';
+var oXhr = new XMLHttpRequest();
+oXhr.onload = function () {
+	var data = jQuery.parseJSON(this.responseText);
+  //var data = JSON.parse(this.responseText);
+  // ici les données sont exploitables
+  console.log('retour : ', data);
+	
+/*	{
+  "number": 123,
+  "contract_name" : "Lyon",
+  "name": "nom station",
+  "address": "adresse indicative",
+  "position": {
+    "lat": 45.774204,
+    "lng": 4.867512
+  },
+  "banking": true,
+  "bonus": false,
+  "status": "OPEN",
+  "bike_stands": 20,
+  "available_bike_stands": 15,
+  "available_bikes": 5,
+  "last_update": <timestamp>
+}
+*/
+	
+console.log('nom : ', data[9].name, 'lat : ', data[9].position.lat, 'lng : ', data[9].position.lng);
+
+	
+///////////
 //Map
+///////////
 
 var mymap = L.map('mapid').setView([45.75, 4.85], 13.5);
 
@@ -16,47 +54,25 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
   id: 'mapbox.streets'
 }).addTo(mymap);
 
+for(var i= 0; i < data.length; i++)
+{
+     var marker = L.marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
+}
+	
 
-var marker = L.marker([51.4, -0.08]).addTo(mymap);
-var marker = L.marker([45.755, 4.85]).addTo(mymap);
 
+//var marker = L.marker([51.4, -0.08]).addTo(mymap);
+//var marker = L.marker([45.755, 4.85]).addTo(mymap);
+
+
+
+	
+};
+
+oXhr.onerror = function (data) {
+  console.log('Erreur ...');
+};
+oXhr.open('GET', url, true);
+oXhr.send(null);
 
 //Récupérer dans le fichier Json la latitude et longitude pour chacun des vélos et l'injecter dans la variable marker pour les afficher sur sur la map
-
-
-//function markerOnClick(e) {   //e correspond à "event"
-//	alert("Marker clicked");
-//}
-
-//L.marker([]).on('click', markerOnClick).addTo(map);
-
-
-//onmousedown ready to draw
-//lastX :1168 lastY :1916
-
-//Object { canvasElt: canvas#canvas '', contextElt: CanvasRenderingContext2D, lastX: 0, lastY: 0, newX: 0, newY: 0, pencilContact: true, eraseButtonElt: button#erase '' , validateButtonElt: button#confirm'' }
-
-//mousedown ready to draw
-//lastX :1168 lastY :1916
-
-//Object { canvasElt: canvas#canvas '', contextElt: CanvasRenderingContext2D, lastX: 0, lastY: 0, newX: 0, newY: 0, pencilContact: true, eraseButtonElt: button#erase '' , validateButtonElt: button#confirm'' }
-
-//mousemove : drawing
-//lastX :1168 lastY :1915
-//newX :1168 newY :1915
-
-//propriété qui définit le premier point en X et en Y lorsque tu cliques, puis un point en X et en Y lorsque ta souris se déplace. Tu obtiens donc une première position et une position "actuelle" selon le déplacement de ta souris. Evidemment, à chaque mouvement ta position actuelle devient ta première position.
-
-//Exemple JSON
-//{
-//    "player": {
-//        "pseudo": "terminator",
-//        "xp": "205",
-//        "backpack": {
-//            "item": [
-//                { "name": "potion", "nbre": "3" },
-//                { "name": "bullet", "nbre": "105" }
-//            ]
-//        }
-//    }
-//}
