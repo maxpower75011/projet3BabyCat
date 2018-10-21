@@ -1,14 +1,7 @@
-
-///////////
-///////////
 ///////////
 //Code JC Decaux
 ///////////
-///////////
-///////////
-///////////
-///////////
-///////////
+
 
 var url = 'https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=0ae98a85f566e50063913e55f95b55366337fba6';
 var oXhr = new XMLHttpRequest();
@@ -59,14 +52,9 @@ for(var i= 0; i < data.length; i++)
      var marker = L.marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
 }
 	
-
-
 //var marker = L.marker([51.4, -0.08]).addTo(mymap);
 //var marker = L.marker([45.755, 4.85]).addTo(mymap);
 
-
-
-	
 };
 
 oXhr.onerror = function (data) {

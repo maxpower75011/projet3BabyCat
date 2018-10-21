@@ -1,4 +1,3 @@
-
 //Carrousel
 // https://openclassrooms.com/fr/courses/1567926-un-site-web-dynamique-avec-jquery/1569419-tp-le-carrousel
 
