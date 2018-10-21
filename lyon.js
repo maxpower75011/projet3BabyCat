@@ -47,7 +47,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
   id: 'mapbox.streets'
 }).addTo(mymap);
 
-for(var i= 0; i < data.length; i++)
+for(var i= 0; i < data.length; i++) //pour la variable i=0, i inférieur à l'ensemble des valeurs de la data et i+1
 {
      var marker = L.marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
 }
