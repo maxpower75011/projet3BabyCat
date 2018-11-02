@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaflet - Marker Click Event</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+<!--[if lte IE 8]><link rel="stylesheet" href="../dist/leaflet.ie.css" /><![endif]-->
+<style>
+
+#map { height: 600px; }
+
+
+      #content {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        width :200px;
+        height:600px;
+        background-color: #fff;
+        padding: 20px;
+      }
+
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="mapid"></div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        init_map();
+        add_marker();
+    });
+    var map;
+
+    function init_map() {
+        map = L.map('map').setView([44.86,  -0.65, - 2.4], 6);
+        /*L.tileLayer(
+              'http://wxs.ign.fr/ihlnb9fa3gf5z3ti0ays7zrj/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGN&format=image/jpeg&style=normal',
+              {
+                      minZoom:0,
+                      maxZoom:18,
+                      tileSize:256
+              }).addTo(map);*/
+
+        L.tileLayer(
+              'http://wxs.ign.fr/go6t04lhhazkrms3fgfzw1f0/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGN&format=image/jpeg&style=normal',
+              {
+                      minZoom:0,
+                      maxZoom:18,
+                      tileSize:256
+              }).addTo(map);
+
+    }
+
+    function add_marker() {
+        var points = [
+            ["P1", 44.8637064,-0.6563523, '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">BORDEAUX</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'Acceder à la Page Bordeaux</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>'],
+            ["P2", 45.8637064,-0.6563523, '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">LA ROCHELLE</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'Acceder à la Page Bordeaux</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>'],
+            ["P3", 46.8637064,-0.6563523, '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">NANTES</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'Acceder à la Page Bordeaux</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>']
+        ];
+        var marker = [];
+        var i;
+        for (i = 0; i < points.length; i++) {
+            marker[i] = new L.Marker([points[i][1], points[i][2]], {
+                desc: points[i][3]
+            });
+            marker[i].addTo(map);
+            marker[i].bindPopup(points[i][3]);
+           // marker[i].on('click', onClick);
+        };
+    }
+
+    function onClick(e) {
+        //console.log(this.options.win_url);
+        //window.open(this.options.win_url);
+            e.
+            e.openPopup();
+    }
+
+/*    var mymap = L.map('mapid').setView([51.505, -0.09], 13); */
+
+</script>
+
+</body>
+</html>

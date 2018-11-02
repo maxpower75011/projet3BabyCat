@@ -1,0 +1,157 @@
+/* Feuille de styles modèle
+ * pour les tutoriels
+ * Alsacreations.com
+ */
+
+body {
+	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	color: #444;
+	background:#f4f4f4;
+	padding:0 0 2em 0;
+	margin:0;
+}
+
+#wrap {
+	padding: 0 3em 3em 3em;
+	margin:auto;
+}
+
+h1 {
+	color: #99b92c;
+	font-size: 4em;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #cccccc;
+	background:white;
+	border-bottom:2px dotted #ccc;
+	margin:0;
+	padding:0.8em;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight:bold;
+	margin: 1.5em 0 .8em 0;
+	color: #444;
+	text-shadow: 1px 1px 1px #cccccc;
+}
+
+ul {
+	margin:0;
+	padding:0;
+}
+
+li {
+	background: url(/css/img/ico-puce.png) no-repeat scroll left 7px transparent;
+	list-style-type:none;
+	padding-left: 10px;
+}
+
+.mentions {
+	background:#505050 url(/css/img/footer-logo.png) no-repeat 99% 50%;
+	padding:1.3em;
+	color:#fff;
+	-webkit-box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.1);
+	-moz-box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.1);
+	box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.1);
+	border:1px solid #ddd;
+	margin:8em 3em 1em 3em;
+	padding-right: 170px;
+}
+
+.mentions a {
+	font-weight:bold;
+	color:#fff;
+}
+
+.hint {
+	background:#ddd;
+	padding:3px;
+	border:1px dashed white;
+}
+
+.warning {
+	color:#c00;
+}
+
+input[type="number"] {
+		line-height:1.5;
+		width:50px;
+		border-radius:5px;
+		border: 1px solid #dadada;
+	}
+table {
+	width: auto;
+	margin: 1em 0;
+}
+
+th {
+	color:#555;
+	background: #DDD;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	-webkit-border-top-right-radius: 7px;
+	-webkit-border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+}
+
+th, td {
+text-align: left;
+padding: 5px 8px;
+}
+
+fieldset {
+	border:0;
+	padding:0;
+}
+legend {
+	padding-bottom: 1em;
+}
+
+@media (max-width: 640px) {
+	h1 {font-size:2.5em;}
+	img {
+	height: auto; width: auto;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    }
+	 body, details, .mentions {
+	   width: auto;
+	   margin: auto;
+	   padding: auto;
+	 }
+	img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+	   max-width: 100%;
+	 }
+	img {
+	   height: auto; width: auto;
+	   -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	 }
+	textarea, table, td, th, code, pre, samp {
+	   word-wrap: break-word;
+	   -webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	   hyphens: auto;
+	}
+	code, pre, samp {
+	   white-space: pre-wrap;
+	}
+	
+	p + details, form, h3 {margin-left:0 !important;}
+	img {
+	   float: none !important;
+	   width: auto !important;
+	}
+	.mentions {
+		background-image:none;
+	}
+	.hide_mobile {
+	   display: none !important;
+	}
+}
+@media (max-width:640px) and (orientation: landscape) {
+  body {
+   -webkit-text-size-adjust: 70%;
+  }
+}
