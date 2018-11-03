@@ -25,7 +25,7 @@ function init_map() {
       console.log('retour : ', data);
       //console.log('nom : ', data[9].name, 'lat : ', data[9].position.lat, 'lng : ', data[9].position.lng);
 
-      // Création des marker et porionement sur la carte
+      // Création des marker et positionnement sur la carte
       var marker = [];
       var i;
       for (i = 0; i < 10; i++) {
