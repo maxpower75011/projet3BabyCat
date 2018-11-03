@@ -9,8 +9,23 @@
    	<!-- CSS -->
     <link rel="stylesheet" href="./lyon.css">
         <!-- on inclut la bibliothèque depuis les serveurs de Google -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<style>
 
+#map { height: 600px; }
+
+
+      #content {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        width :200px;
+        height:600px;
+        background-color: #fff;
+        padding: 20px;
+      }
+
+</style>
 
 </head>
   <body>
@@ -33,6 +48,7 @@
 
     <p>I'm your cool new webpage. Made with <a href="https://glitch.com">Velo'v</a>!</p>
 
+<div id="map"></div>
     <div id="mapid"></div>
 
    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
