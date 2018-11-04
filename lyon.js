@@ -31,7 +31,7 @@ function init_map() {
       for (i = 0; i < 10; i++) {
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
          //console.log(marker[i]);
-         marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes);
+         marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input type="button" value="Réserver" href="lien"/></div>');
          marker[i].on('click', onClick);
       }
 
