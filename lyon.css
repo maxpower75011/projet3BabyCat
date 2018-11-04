@@ -59,6 +59,16 @@ h1 {
     text-decoration: none;
 }
 
+#map { height: 600px; }
+#content {
+	position: fixed;
+    right: 0px;
+    top: 0px;
+    width :200px;
+    height:600px;
+    background-color: #fff;
+    padding: 20px;
+}
 
 #mapid { height: 600px; }
 
