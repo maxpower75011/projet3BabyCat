@@ -45,15 +45,15 @@ h1 {
 }
 
 /*- Map -*/
-.bouton {
+.bouton input[type=submit] {
 	box-shadow: rgb(0, 0, 0) 0px 19px 41px -14px;
     background-color: rgb(255, 255, 255);
-    border-radius: 36px;
+    border-radius: 30px;
     border: 1px solid rgb(255, 255, 255);
     display: inline-block;
     cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-family: Roboto;
+    
+    font-family: 'Pattaya', sans-serif;
     font-size: 10px;
     padding: 5px 5px;
     text-decoration: none;
