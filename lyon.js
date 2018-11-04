@@ -31,8 +31,9 @@ function init_map() {
       for (i = 0; i < 10; i++) {
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
          //console.log(marker[i]);
-         marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input type="submit" value="Réserver" href="lien"/></div>');
+         marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div id="resa" class="bouton"><input type="submit" value="Réserver" href="lien"/></div>');
          marker[i].on('click', onClick);
+         $('#resa').on('click', onResaClick);
       }
 
    };
@@ -46,8 +47,17 @@ function init_map() {
 
 function onClick(e) {
    //e.openPopup();
+      alert('ok');
+}
+
+
+function onResaClick(e) {
+   alert('ok');
+   //e.openPopup();
 }
 
 $(document).ready(function() {
    init_map();
+
+
 });
