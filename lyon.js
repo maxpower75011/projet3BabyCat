@@ -31,11 +31,13 @@ function init_map() {
       for (i = 0; i < 10; i++) {
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
          //console.log(marker[i]);
-         marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div id="resa" class="bouton"><input type="submit" value="Réserver" href="lien"/></div>');
-         marker[i].on('click', onClick);
-         $('#resa').on('click', onResaClick);
-      }
+         marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
+		 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
+         //marker[i].on('click', onClick); // pour faire quelquechose au clic sur le marker
+		  
 
+         
+      }
    };
 
    oXhr.onerror = function(data) {
@@ -46,18 +48,17 @@ function init_map() {
 }
 
 function onClick(e) {
+	// pour faire quelquechose au clic sur le marker
    //e.openPopup();
-      alert('ok');
+      //alert('ok');
 }
 
-
 function onResaClick(e) {
-   alert('ok');
    //e.openPopup();
+	$( "#register" ).css( "display", "block" );
 }
 
 $(document).ready(function() {
    init_map();
-
-
+	
 });
