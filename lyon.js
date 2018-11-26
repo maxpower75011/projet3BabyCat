@@ -2,10 +2,12 @@
 var mymap;
 var data;
 
+var ville = 'Nantes';
+
 function init_map() {
 
    //Initialisation de la carte
-   var mymap = L.map('mapid').setView([45.75, 4.85], 13.5);
+   var mymap = L.map('mapid').setView([47.217, -1.553], 13.5);
 
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
@@ -16,7 +18,7 @@ function init_map() {
    }).addTo(mymap);
 
    //Recuperation des infos via API JC Decaux
-   var url = 'https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=0ae98a85f566e50063913e55f95b55366337fba6';
+   var url = 'https://api.jcdecaux.com/vls/v1/stations?contract='+ ville +'&apiKey=0ae98a85f566e50063913e55f95b55366337fba6';
    var oXhr = new XMLHttpRequest();
 
    oXhr.onload = function() {
@@ -28,7 +30,7 @@ function init_map() {
       // Création des marker et positionnement sur la carte
       var marker = [];
       var i;
-      for (i = 0; i < 10; i++) {
+      for (i = 0; i < data.length; i++) {
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
          //console.log(marker[i]);
          marker[i].bindPopup(data[i].name + '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
@@ -62,3 +64,8 @@ $(document).ready(function() {
    init_map();
 	
 });
+
+//L'API de stockage Web fournit des mécanismes --> navigateurs stockent paires clé / valeur
+//Les clés et les valeurs sont toujours des chaînes (les clés entières seront automatiquement converties en chaînes, exactement comme le font les objets).
+//Accéder à ces valeurs comme un objet ou avec les méthodes Storage.getItem () et Storage.setItem ().
+
