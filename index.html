@@ -13,6 +13,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<!-- Typo -->
 	<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
   <body>
@@ -20,25 +21,86 @@
 
 	  <div id="carrousel">
     	<ul>
-        <li><img src="img/image_1.png"/><p class="text_carrousel">caca caca caca caca caca caca caca</p></li>
-        <li><img src="https://media.giphy.com/media/LZaA5gGjbUJOw/giphy.gif" /><p class="text_carrousel">2</p></li>
-        <li><img src="https://media.giphy.com/media/qFxlqjtA3m44U/giphy.gif" /><p class="text_carrousel">salut</p></li>
+        <li><img src="img/image_1.png"/><p class="text_carrousel">L’application indispensable à tous les utilisateurs du service Vélo’v. Ce service est disponible à Nantes et dans d'autres grandes villes.</p></li>
+        <li><img src="img/image_2.jpg" /><p class="text_carrousel">Localisez votre Velo'v le plus proche et s'il est disponible, une fois à l'endroit indiqué, réserver le, et c'est parti pour un tour !</p></li>
+        <li><img src="https://media.giphy.com/media/qFxlqjtA3m44U/giphy.gif" /><p class="text_carrousel"> L’application indispensable à tous les utilisateurs du service Vélo’v. Ce service est disponible à Nantes et dans d'autres grandes villes.</p></li>
     	</ul>
 	  </div>
 	  
-   <p>I'm your cool new webpage. Made with <a href="">Velo'v</a>!</p>
+   <p>Présentation de votre location de vélos, <a href=""><strong>Velo'v</strong></a>!</p>
 	  
-
-<!-- <div id="map"></div> -->
+<!-- Map -->
     <div id="mapid"></div>
 
    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 
-	<canvas id="myCanvas" width="200" height="100"></canvas>
-<div id="register"  style="display:none;" class="answer_list" > SIGNATURE</div>
+	
 	  
-    <script src="./lyon.js" defer></script>
-    <script src="./carroussel.js" defer></script>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<div id="register"  style="display:none;" class="answer_list" > SIGNATURE
+<!-- WebStorage -->	  
+<h1>Web Storage</h1>
 
-</body>
+<div id="wrap">
+
+	<h2>Démonstration 3</h2>
+	
+	<p>Utilise JSON en complément de Web Storage.</p>
+	
+	<form>
+		<p><label>Nom</label></p>
+		<p><input id="nom" name="nom" type="text"></p>
+		<p><label>Prénom</label></p>
+		<p><input id="prenom" name="prenom" type="text"></p>
+		<p><label>Ville</label></p>
+		<p><input id="ville" name="ville" type="texte"></p>
+		<p>
+		<input type="button" value="Mémoriser" id="stockage">
+		<input type="reset" value="Effacer tout">
+		<input type="button" value="Récupérer" id="lecture">
+		</p>
+	</form>
+</div>
+</div>
+	  
+<footer>
+<p> Données de réservation stockées dans navigateur à l'aide de l'API Html5 WebStorage et affcihées dans footer en dessous du panneau. <br> Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation <br> Une seule réservation à la fois, si nouvelle --> remplace l'autre <br>
+webStorage - Appels ajax: côté front envoyer informations au serveur -> pas nécessaire pour cela. <br>
+Méthode Get Post:envoyer infos au serveur: formulaire qu'il faut que j'envoie pour que le serveur php puisse récupérer infos- delete remove 
+Php, node.js, python
+fonction SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!"); location.reload()},3000); et faire qqch comme cela: document.getElementById('prenom').value = coordonnees.prenom;
+</p>
+	
+</footer>
+
+<script>
+//-- Méthode de stockage --//
+document.getElementById('stockage').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = {
+			nom:document.getElementById('nom').value,
+			prenom:document.getElementById('prenom').value,
+			ville:document.getElementById('ville').value,
+		};
+		localStorage.setItem('coord',JSON.stringify(coordonnees));
+		alert("Mémorisation effectuée");
+	} else alert("localStorage n'est pas supporté");
+};
+//-- Méthode de lecture --//
+document.getElementById('lecture').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = JSON.parse(localStorage.getItem('coord'));
+		document.getElementById('nom').value = coordonnees.nom;
+		document.getElementById('prenom').value = coordonnees.prenom;
+		document.getElementById('ville').value = coordonnees.ville;
+		alert("Lecture effectuée");
+	} else alert("localStorage n'est pas supporté");
+};
+</script>
+	  
+<script src="./lyon.js" defer></script>
+<script src="./carroussel.js" defer></script>
+<script src="./timer.js" defer></script>
+	
+</body>	
 </html>
