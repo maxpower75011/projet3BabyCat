@@ -1,6 +1,17 @@
 //Carrousel: https://openclassrooms.com/fr/courses/1567926-un-site-web-dynamique-avec-jquery/1569419-tp-le-carrousel
 
 $(document).ready(function(){
+	
+	$(window).keydown(function(e){ //dans la fenêtre, à l'appui sur une touche du clavier
+		switch (e.keyCode) {
+			case 37: // flèche gauche
+				alert('gauche'); //
+				break;
+			case 39: // flèche droite
+				alert('droite');
+				break;
+		}
+	});
 
 var $carrousel = $('#carrousel'), // on cible le bloc du carrousel
     $img = $('#carrousel img'), // on cible les images contenues dans le carrousel
