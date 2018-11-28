@@ -98,10 +98,11 @@ body {
 #register {
     position: relative;
     background: #fff;
-    height: 250px;
+    height: 400px;
     width: 250px;
-    top: -400px;
+    top: -535px;
     float: right;
     z-index: 10000;
+	left: 250px;
 }
 
