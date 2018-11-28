@@ -33,7 +33,7 @@ h1 {
   margin:0 auto;
   width:350px;
   height:350px;
- }
+}
 
 .text_carrousel {
 	margin-top: -90px;
@@ -75,7 +75,7 @@ html, body, #map {
     text-decoration: none;
 }
 
-#map{ height: 600px; 
+#map { height: 600px; 
 }
 
 #content {
