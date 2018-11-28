@@ -17,7 +17,7 @@
 
 </head>
   <body>
-	  <h1>Réservez votre Velo'v à Lyon</h1>
+	  <h1>Réservez votre Velo'v à Nantes</h1>
 
 	  <div id="carrousel">
     	<ul>
@@ -27,8 +27,6 @@
     	</ul>
 	  </div>
 	  
-   <p>Présentation de votre location de vélos, <a href=""><strong>Velo'v</strong></a>!</p>
-	  
 <!-- Map -->
     <div id="mapid"></div>
 
@@ -37,27 +35,52 @@
 	
 	  
 <canvas id="myCanvas" width="200" height="100"></canvas>
-<div id="register"  style="display:none;" class="answer_list" > SIGNATURE
+<div id="register"  style="display:none;" class="answer_list"> <h1>SIGNATURE</h1>
+
 <!-- WebStorage -->	  
-<h1>Web Storage</h1>
-
 <div id="wrap">
-
-	<h2>Démonstration 3</h2>
-	
 	<p>Utilise JSON en complément de Web Storage.</p>
+				
+<script>
+//-- Méthode de lecture --//
+//document.getElementById('lecture').onclick = function() {
+	var registered ='false';
+	if(registered == 'true' && typeof localStorage!='undefined' && JSON) {
+		var coordonnees = JSON.parse(localStorage.getItem('coord'));
+		document.getElementById('nom').value = coordonnees.nom;
+		//document.getElementById('prenom').value = coordonnees.prenom;
+		//document.getElementById('ville').value = coordonnees.ville;
+		alert("Lecture effectuée");
+//	} else alert("localStorage n'est pas supporté");
+};</script>
 	
 	<form>
 		<p><label>Nom</label></p>
 		<p><input id="nom" name="nom" type="text"></p>
-		<p><label>Prénom</label></p>
-		<p><input id="prenom" name="prenom" type="text"></p>
-		<p><label>Ville</label></p>
-		<p><input id="ville" name="ville" type="texte"></p>
 		<p>
-		<input type="button" value="Mémoriser" id="stockage">
-		<input type="reset" value="Effacer tout">
-		<input type="button" value="Récupérer" id="lecture">
+		<input type="button" value="Save" id="stockage">
+			
+			
+<script>
+	//alert(data[i].reserved); 
+var registered ='true';
+	
+	//-- Méthode de stockage --//
+document.getElementById('stockage').onclick = function() {
+	if(typeof localStorage!='undefined' && JSON) {
+		var coordonnees = {
+			nom:document.getElementById('nom').value,
+			station:128 // > renseigner la station 
+			//prenom:document.getElementById('prenom').value,
+			//ville:document.getElementById('ville').value,
+		};
+		localStorage.setItem('coord',JSON.stringify(coordonnees));
+		alert("Mémorisation effectuée");
+	} else alert("localStorage n'est pas supporté");
+};
+
+</script>
+
 		</p>
 	</form>
 </div>
@@ -73,30 +96,6 @@ fonction SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!")
 	
 </footer>
 
-<script>
-//-- Méthode de stockage --//
-document.getElementById('stockage').onclick = function() {
-	if(typeof localStorage!='undefined' && JSON) {
-		var coordonnees = {
-			nom:document.getElementById('nom').value,
-			prenom:document.getElementById('prenom').value,
-			ville:document.getElementById('ville').value,
-		};
-		localStorage.setItem('coord',JSON.stringify(coordonnees));
-		alert("Mémorisation effectuée");
-	} else alert("localStorage n'est pas supporté");
-};
-//-- Méthode de lecture --//
-document.getElementById('lecture').onclick = function() {
-	if(typeof localStorage!='undefined' && JSON) {
-		var coordonnees = JSON.parse(localStorage.getItem('coord'));
-		document.getElementById('nom').value = coordonnees.nom;
-		document.getElementById('prenom').value = coordonnees.prenom;
-		document.getElementById('ville').value = coordonnees.ville;
-		alert("Lecture effectuée");
-	} else alert("localStorage n'est pas supporté");
-};
-</script>
 	  
 <script src="./lyon.js" defer></script>
 <script src="./carroussel.js" defer></script>
