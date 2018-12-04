@@ -1,7 +1,6 @@
 //Récupérer dans le fichier Json la latitude et longitude pour chacun des vélos et l'injecter dans la variable marker pour les afficher sur sur la map
 var mymap;
 var data;
-
 var ville = 'Nantes';
 
 function init_map() {
@@ -38,9 +37,7 @@ function init_map() {
          marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
 		 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
          //marker[i].on('click', onClick); // pour faire quelquechose au clic sur le marker
-		  
-
-      	//}   
+	  //}   
       }
    };
 
@@ -66,6 +63,12 @@ $(document).ready(function() {
    init_map();
 	
 });
+
+// reset the color after a short delay
+   /* setTimeout(function() {
+    event. = "";
+    }, 500);
+  }, false); */
 
 //L'API de stockage Web fournit des mécanismes --> navigateurs stockent paires clé / valeur
 //Les clés et les valeurs sont toujours des chaînes (les clés entières seront automatiquement converties en chaînes, exactement comme le font les objets).

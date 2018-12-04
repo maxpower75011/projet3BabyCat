@@ -5,9 +5,16 @@ body {
   margin: 20em;
 }
 
+#conteneur {
+    width: 1020px;
+    margin: auto;
+    min-height: 100%;
+    position: relative;
+}
+
 h1 {
   font-style: italic;
-  color: #373fff;
+  color: darkgreen;
 }
 
 /*- Carrousel -*/
@@ -15,8 +22,9 @@ h1 {
 #carrousel{
     position:relative;
     height:350px;
-    width:350px;
+    width:1000px;
     margin:auto;
+	background-color: bisque;
 }
 
 #carrousel ul {
@@ -61,16 +69,21 @@ html, body, #map {
 
 /*- Map -*/
 
+.leaflet-popup-content-wrapper {
+	text-align: center;
+}
+
+.leaflet-popup-content-wrapper, {
+	background: white;
+}
+
 .bouton input[type=submit] {
 	box-shadow: rgb(0, 0, 0) 0px 19px 41px -14px;
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
-    border: 1px solid rgb(255, 255, 255);
     display: inline-block;
     cursor: pointer;
-    
     font-family: 'Pattaya', sans-serif;
-    font-size: 10px;
     padding: 5px 5px;
     text-decoration: none;
 }
@@ -106,3 +119,6 @@ body {
 	left: 250px;
 }
 
+#myCanvas {
+	border: 2px solid black;
+}

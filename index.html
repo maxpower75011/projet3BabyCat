@@ -17,7 +17,8 @@
 
 </head>
   <body>
-	  <h1>Réservez votre Velo'v à Nantes</h1>
+<div id="conteneur">
+	  <h1>Votre Velo'v à Nantes</h1>
 
 	  <div id="carrousel">
     	<ul>
@@ -32,12 +33,12 @@
 
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 
-<canvas id="myCanvas" width="200" height="100"></canvas>
+
 <div id="register"  style="display:none;" class="answer_list"> <h1>SIGNATURE</h1>
 
 <!-- WebStorage -->	  
 <div id="wrap">
-	<p>Utilise JSON en complément de Web Storage.</p>
+	<p>Utilise JSON qui complète Web Storage.</p>
 				
 <script>
 //-- Méthode de lecture --//
@@ -56,7 +57,9 @@
 		<p><label>Nom</label></p>
 		<p><input id="nom" name="nom" type="text"></p>
 		<p>
-		<input type="button" value="Save" id="stockage">
+		<input type="button" value="Enregistrer" id="stockage">
+	    </p>
+	</form>
 			
 <script>
 //alert(data[i].reserved); 
@@ -78,17 +81,25 @@ document.getElementById('stockage').onclick = function() {
 
 </script>
 
-		</p>
-	</form>
+	<canvas id="myCanvas" width="200" height="100"></canvas>
+</div>
 </div>
 </div>
 	  
 <footer>
-<p> Données de réservation stockées dans navigateur à l'aide de l'API Html5 WebStorage et affcihées dans footer en dessous du panneau. <br> Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation <br> Une seule réservation à la fois, si nouvelle --> remplace l'autre <br>
+<p> Données de réservation stockées dans navigateur à l'aide de l'API Html5 WebStorage et affichées dans footer en dessous du panneau. <br> Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation <br> Une seule réservation à la fois, si nouvelle --> remplace l'autre <br>
 webStorage - Appels ajax: côté front envoyer informations au serveur -> pas nécessaire pour cela. <br>
 Méthode Get Post:envoyer infos au serveur: formulaire qu'il faut que j'envoie pour que le serveur php puisse récupérer infos- delete remove 
 Php, node.js, python
-fonction SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!"); location.reload()},3000); et faire qqch comme cela: document.getElementById('prenom').value = coordonnees.prenom; </p>
+fonction SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!"); location.reload()},3000); et faire qqch comme cela: document.getElementById('prenom').value = coordonnees.prenom; 
+	
+Pour le canva: il faut faire du html et du javascript avec un event listener et une fonction
+// reset the color after a short delay
+    setTimeout(function() {
+    event.target.style.color = "";
+    }, 500);
+  }, false);	
+</p>
 	
 </footer>
 

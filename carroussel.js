@@ -28,7 +28,7 @@ $currentP.css('display', 'block'); // on affiche seulement l'image courante
 
 $carrousel.append('<div class="controls"> <span class="prev">Precedent</span> <span class="next">Suivant</span> </div>');
 
-$('.next').click(function(){ // image suivante
+$('.next').click(function(){ // image suivante -> ceci est un event listener
 
     i++; // on incrémente le compteur
 
@@ -89,4 +89,8 @@ function slideImg(){
 
 slideImg(); // enfin, on lance la fonction une première fois
 
+});
+
+$('#myCanvas').mouseover(function(){
+console.log('chat')	
 });
