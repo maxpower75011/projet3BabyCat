@@ -17,8 +17,14 @@ body {
 }
 
 h1 {
-  font-style: italic;
-  color: rosybrown;
+	color: rosybrown;
+	text-align: center;
+	font-family: 'Pattaya', sans-serif;
+}
+
+#header {
+	background-color: #324d5d;
+	padding: 10px;
 }
 
 /*- Carrousel -*/
@@ -38,7 +44,6 @@ h1 {
 #carrousel ul li{
     position:absolute;
     top:0;
-    left:0;
 }
 
 #carrousel ul li img  {
@@ -48,20 +53,36 @@ h1 {
 
 .text_carrousel {
 	margin-top: -90px;
-	margin-left: 20px;
-	margin-right: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
 	margin-bottom: 30px;
 	color: lightblue;
+	text-align: center;
 }
 
 .controls {
-  	color: lightblue;
+  	color: ghostwhite;
     display: block;
     position: relative;
 	padding: 10px;
+	top: 50%;
+}
+
+.prev {
+    padding: 5px;
+    background-color: lightblue;
+    border-style: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rosybrown;
+	
 }
 .next {
 	float: right;
+	padding: 5px;
+    background-color: lightblue;
+    border-style: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rosybrown;
 }
 
 /*- Html, Body, Map -*/
@@ -92,9 +113,6 @@ html, body, #map {
     text-decoration: none;
 }
 
-#map { height: 600px; 
-}
-
 #content {
 	position: fixed;
     right: 0px;
@@ -106,17 +124,16 @@ html, body, #map {
 }
 
 #mapid { 
-	height: 600px; 
-	width: 800px;
+	height: 500px; 
+	border: 1px solid rosybrown;
 }
 
 
 #register {
     position: relative;
     background: #fff;
-    height: 400px;
     width: 250px;
-    top: -535px;
+    top: -500px;
     float: right;
     z-index: 10000;
 	left: 150px;
@@ -127,9 +144,12 @@ html, body, #map {
 }
 
 /*-- Formulaire --*/
-#nom {
-	border-color: rosybrown;
+.nom {
+	border: 1px solid rosybrown;
+	border-radius: 3px;
+	padding: 10px;
 }
+
 #stockage {
     padding: 10px;
     background-color: lightblue;
@@ -142,7 +162,12 @@ html, body, #map {
 
 #footer {
 	width: 100%;
-    height: 100px;
     background-color: #324d5d;
     color: ghostwhite;
+}
+
+#p_footer {
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
 }
