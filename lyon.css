@@ -14,7 +14,7 @@ body {
 
 h1 {
   font-style: italic;
-  color: darkgreen;
+  color: rosybrown;
 }
 
 /*- Carrousel -*/
@@ -120,5 +120,19 @@ body {
 }
 
 #myCanvas {
-	border: 2px solid black;
+	border: 2px solid rosybrown;
+}
+
+/*-- Formulaire --*/
+#nom {
+	border-color: rosybrown;
+}
+#stockage {
+    padding: 10px;
+    background-color: lightblue;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 3px;
+    font-weight: bold;
+    box-shadow: 0 3px 0 rosybrown;
 }
