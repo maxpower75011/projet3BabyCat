@@ -5,7 +5,7 @@ var ville = 'Nantes';
 
 function init_map() {
 
-   //Initialisation de la carte
+//Initialisation de la carte
    var mymap = L.map('mapid').setView([47.217, -1.553], 13.5);
 
    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -16,7 +16,7 @@ function init_map() {
       id: 'mapbox.streets'
    }).addTo(mymap);
 
-   //Recuperation des infos via API JC Decaux
+//Recuperation des infos via API JC Decaux
    var url = 'https://api.jcdecaux.com/vls/v1/stations?contract='+ ville +'&apiKey=0ae98a85f566e50063913e55f95b55366337fba6';
    var oXhr = new XMLHttpRequest();
 
@@ -26,8 +26,8 @@ function init_map() {
       console.log('retour : ', data);
       //console.log('nom : ', data[9].name, 'lat : ', data[9].position.lat, 'lng : ', data[9].position.lng);
 
-      // Création des marker et positionnement sur la carte
-      var marker = [];
+// Création des marker et positionnement sur la carte
+      var marker = []; //
       var i;
       for (i = 0; i < data.length; i++) {
 		 data[i].reserved = 'NON'; 
@@ -50,8 +50,8 @@ function init_map() {
 
 function onClick(e) {
 	// pour faire quelquechose au clic sur le marker
-   //e.openPopup();
-      //alert('ok');
+    //e.openPopup();
+    //alert('ok');
 }
 
 function onResaClick(e) {
@@ -61,7 +61,6 @@ function onResaClick(e) {
 
 $(document).ready(function() {
    init_map();
-	
 });
 
 // reset the color after a short delay
@@ -74,3 +73,23 @@ $(document).ready(function() {
 //Les clés et les valeurs sont toujours des chaînes (les clés entières seront automatiquement converties en chaînes, exactement comme le font les objets).
 //Accéder à ces valeurs comme un objet ou avec les méthodes Storage.getItem () et Storage.setItem ().
 
+//CANVA
+/*class Sign{ 
+this.canvas = document.getElementById('myCanvas');
+this.infValidation = $('#rreserved-bike');
+this.ctx = this.canvas.getContext('2d');
+this.paint = (e) => {
+	this.ctx.lineTo(e.offsetX, e.offsetY);
+	this.ctx.stroke();
+}}
+
+canvasSign(){
+	this.canvas.addEventListener(type:'pointerdown', listener(e) => {
+		this.ctx.beginPath();
+		this.canvas.addEventListener(type:"mousemove", this.paint, options:false);
+	}
+	)
+	this.canvas.addEventListener(type:'pointerup', listener:(e) =>{
+		this.canvas.removeEventListener(type:'mousemove', this.paint);
+	})
+} */
