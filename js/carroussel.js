@@ -90,7 +90,3 @@ function slideImg(){
 slideImg(); // enfin, on lance la fonction une première fois
 
 });
-
-$('#myCanvas').mouseover(function(){
-console.log('chat')	
-});
