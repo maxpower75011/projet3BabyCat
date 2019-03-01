@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-#conteneur {
+.conteneur {
     width: 1020px;
     margin: auto;
     min-height: 100%;
@@ -20,6 +20,7 @@ h1 {
 	color: rosybrown;
 	text-align: center;
 	font-family: 'Pattaya', sans-serif;
+	box-shadow: 0 2px 0 rosybrown;
 }
 
 #header {
@@ -32,10 +33,11 @@ h1 {
 #carrousel{
     position:relative;
     height:400px;
-    width:800px;
+    /*-width:800px;-*/
+	width:100%;
     margin:auto;
-	background-color: bisque;
 	padding-bottom: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #carrousel ul {
@@ -75,7 +77,7 @@ h1 {
     padding: 5px;
     background-color: lightblue;
     border-style: none;
-    border-radius: 3px;
+    border-radius: 15px;
     box-shadow: 0 2px 0 rosybrown;
 	cursor: pointer;
 	
@@ -85,7 +87,7 @@ h1 {
 	padding: 5px;
     background-color: lightblue;
     border-style: none;
-    border-radius: 3px;
+    border-radius: 15px;
     box-shadow: 0 2px 0 rosybrown;
 	cursor:pointer;
 }
@@ -130,7 +132,7 @@ html, body, #map {
 
 #mapid { 
 	height: 500px; 
-	border: 1px solid rosybrown;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -169,7 +171,7 @@ html, body, #map {
 
 #footer {
 	width: 100%;
-    background-color: #324d5d;
+    background-color: #425066;
     color: ghostwhite;
 }
 
@@ -177,4 +179,15 @@ html, body, #map {
 	text-align: center;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+/*---------- MEDIA QUERIES (RESPONSIVE) BREAKPOINTS ----------*/
+
+@media all and (min-width: 1000px) {
+
+#carrousel {
+}
+	
+#carrousel ul li img  {
+}
 }
