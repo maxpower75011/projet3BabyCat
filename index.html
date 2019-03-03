@@ -28,7 +28,7 @@
 	
 <div class="conteneur">
 	
-	  <div id="carrousel" col-lg-8 col-md-10 col-sm-12>
+	  <div id="carrousel" class="col-lg-8 col-md-10 col-sm-12">
     	<ul>
         <li><img src="img/velo1.jpg"/><p class="text_carrousel">L’application indispensable à tous les utilisateurs du service Vélo’v. Ce service est disponible à Nantes et dans d'autres grandes villes.</p></li>
         <li><img src="img/velo2.jpg" /><p class="text_carrousel">Localisez votre Velo'v le plus proche et s'il est disponible, une fois à l'endroit indiqué, réserver le, et c'est parti pour un tour !</p></li>
@@ -48,62 +48,36 @@
 <div id="wrap">
 	<h1>Signature</h1>
 				
-<script>
-//-- Méthode de lecture --//
-//document.getElementById('lecture').onclick = function() {
-	var registered ='false';
-	if(registered == 'true' && typeof localStorage!='undefined' && JSON) {
-		var coordonnees = JSON.parse(localStorage.getItem('coord'));
-		document.getElementById('nom').value = coordonnees.nom;
-		//document.getElementById('prenom').value = coordonnees.prenom;
-		//document.getElementById('ville').value = coordonnees.ville;
-		alert("Lecture effectuée");
-//	} else alert("localStorage n'est pas supporté");
-};</script>
-	
 	<form>
 		<p><label>Nom</label></p>
-			<p><input class="nom" name="nom" type="text"></p>
-		    
+		<p><input id="nom" class="nom" name="nom" type="text"></p>
 		<p><label>Prénom</label></p>
-			<p><input class="nom" name="prénom" type="text"></p>
-		
-		<p><input type="button" value="Enregistrer" id="stockage"></p>
+		<p><input id="prenom" class="prenom" name="prenom" type="text"></p>
+		<p><label>Vélo</label></p>
+		<p><input id="ville" name="ville" type="text"></p>
+		<p><input type="button" value="Enregistrer" id="stockage"></p> 
+		<p>
+			<input type="button" value="Enregistrer" id="stockage">
+			<input type="reset" value="Effacer tout">
+			<input type="button" value="Récupérer" id="lecture">
+		</p>
 	</form>
-	
+
 	<img src="img/ic_gesture_48px.png">
 	
 	<canvas id="myCanvas" width="200" height="100"></canvas>
-			
-<script>
-//alert(data[i].reserved); 
-var registered ='true';
-	
-	//-- Méthode de stockage --//
-document.getElementById('stockage').onclick = function() {
-	if(typeof localStorage!='undefined' && JSON) {
-		var coordonnees = {
-			nom:document.getElementById('nom').value,
-			station:128 // > renseigner la station 
-			//prenom:document.getElementById('prenom').value,
-			//ville:document.getElementById('ville').value,
-		};
-		localStorage.setItem('coord',JSON.stringify(coordonnees));
-		alert("Mémorisation effectuée");
-	} else alert("localStorage n'est pas supporté");
-};
-
-</script>
+				
 </div>
 </div>
 </div>
-	  
-
 	  
 <footer id="footer">
 	<p>&copy; 2019 @HEMASN</p>
-	<p id="p_footer"> Données de réservation stockées dans navigateur à l'aide de l'API Html5 WebStorage et affichées dans footer en dessous du panneau. <br> Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation <br> Une seule réservation à la fois, si nouvelle --> remplace l'autre <br>
+	<p id="p_footer"> Data de réservation stockée dans le navigateur à l'aide de l'API Html5 WebStorage en dessous du panneau. <br> 
+	Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation <br> 
+	Une seule réservation à la fois, si nouvelle --> remplace l'autre <br>
 	webStorage - Appels ajax: côté front envoyer informations au serveur -> pas nécessaire pour cela. <br>
+	
 	Méthode Get Post:envoyer infos au serveur: formulaire qu'il faut que j'envoie pour que le serveur php puisse récupérer infos- delete remove Php, node.js, python
 	sessionStorage
 	mouseMove
@@ -114,19 +88,15 @@ SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!");
 location.reload()},3000); 
 document.getElementById('prenom').value = coordonnees.prenom; 
 	
-Pour le canva: il faut faire du html et du javascript avec un event listener et une fonction
-// reset the time after a short delay
-    setTimeout(function() {
-    event.target.time = "";
-    }, 500);
-  }, false);	
+	
 </p>
 	
 </footer>
 
+<script src="./js/webstorage.js"></script>
 <script src="./js/map.js" defer></script>
 <script src="./js/carroussel.js" defer></script>
-<script src="./js/timer.js" defer></script>
+<!-- <script src="./js/timer.js" defer></script> -->
 	
 </body>
 </html>

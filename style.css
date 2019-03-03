@@ -20,7 +20,6 @@ h1 {
 	color: rosybrown;
 	text-align: center;
 	font-family: 'Pattaya', sans-serif;
-	box-shadow: 0 2px 0 rosybrown;
 }
 
 #header {
@@ -145,6 +144,7 @@ html, body, #map {
     z-index: 10000;
 	left: -1px;
 	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #myCanvas {

@@ -17,9 +17,6 @@
 <div id="wrap">
 
 	<h2>Démonstration 3</h2>
-	
-	<p>Cette page utilise JSON en complément de Web Storage.</p>
-	
 	<form>
 		<p><label>Nom</label></p>
 		<p><input id="nom" name="nom" type="text"></p>
@@ -34,13 +31,6 @@
 		</p>
 	</form>
 	
-	<p class="hint">Usage :<br>
-	1. Remplir le formulaire avec quelques informations<br>
-	2. Cliquer sur Mémoriser<br>
-	3. Effacer tout<br>
-	3. Cliquer sur Récupérer pour obtenir les informations à partir de Web Storage<br>
-	</p>
-
 </div>
 
 <p class="mentions">Page de démonstration du tutoriel <a href="https://www.alsacreations.com/article/lire/1402-web-storage-localstorage-sessionstorage.html">Web Storage HTML5</a></p>

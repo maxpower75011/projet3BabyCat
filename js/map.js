@@ -21,22 +21,24 @@ function init_map() {
    var oXhr = new XMLHttpRequest();
 
    oXhr.onload = function() {
-      var data = jQuery.parseJSON(this.responseText); //data est un tableau qui contient toutes les stations
-      // ici les données sont exploitables
+      var data = jQuery.parseJSON(this.responseText);
+//data est un tableau qui contient toutes les stations
+// ici les données sont exploitables
       console.log('retour : ', data);
-      //console.log('nom : ', data[9].name, 'lat : ', data[9].position.lat, 'lng : ', data[9].position.lng);
+//console.log('nom : ', data[9].name, 'lat : ', data[9].position.lat, 'lng : ', data[9].position.lng);
 
 // Création des marker et positionnement sur la carte
       var marker = []; //
       var i;
       for (i = 0; i < data.length; i++) {
 		 data[i].reserved = 'NON'; 
-		  //if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes 
+//if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes 
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
-         //console.log(marker[i]);
+//console.log(marker[i]);
          marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
-		 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
-         //marker[i].on('click', onClick); // pour faire quelquechose au clic sur le marker
+// corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
+//marker[i].on('click', onClick); 
+// pour faire quelquechose au clic sur le marker
 	  //}   
       }
    };
