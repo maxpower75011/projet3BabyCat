@@ -1,3 +1,7 @@
+//Faire apparaître le bouton valider au commencement du dessin pour vérifier si le canvas a été rempli afin de valider la réservation
+
+//il faut que la signature soit bien remplie pour finaliser la résa
+
 $('#myCanvas').mouseover(function(){
 console.log('chat')	
 });
