@@ -35,7 +35,7 @@ function init_map() {
 //if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes 
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
 //console.log(marker[i]);
-         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
+         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="number">' + data[i].number + '</p> <br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
 //marker[i].on('click', onClick); 
 // pour faire quelquechose au clic sur le marker
@@ -59,6 +59,8 @@ function onClick(e) {
 function onResaClick(e) {
    //e.openPopup();
 	$( "#register" ).css( "display", "block" );
+	//value=$( "#number" );
+	//console.log(value);
 }
 
 $(document).ready(function() {

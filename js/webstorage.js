@@ -1,4 +1,3 @@
-
 // Méthode de stockage
 document.getElementById('stockage').onclick = function() {
 	if(typeof localStorage!='undefined' && JSON) {

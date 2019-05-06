@@ -13,14 +13,11 @@ setTimeout (function(){alert("Vous avez dépassé 20 min...Réessayez !")});
 
  reset the time after a short delay setTimeout(function() { event.target.time = ""; }, 500); }, false);
 
-
 //bouton HTML
 
-<button id="save" type="button" >Save</button>
+<button id="save" type="button">Save</button>
 
-</button>
-<div id='print-date'>
-</div>
+<div id='print-date'></div>
 
 //Code Js pour le bouton
 
@@ -36,4 +33,9 @@ function refreshData(){
   
 	printDate.textContent = dateStorage;
 }
+
+myDate = parseInt(sessionStorage.dateReservation);
+millis = Date.now() - myDate;
+diminuerCompteur();
+document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_station) + ' velo'
 
