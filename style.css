@@ -216,6 +216,12 @@ html, body, #map {
 
 
 @media all and (max-width: 380px){
+
+#carrousel {
+	max-width: 300px;
+	height: 150px;
+	margin: 0;
+	}
 	
 #register {
 	max-width: 300px;
