@@ -31,15 +31,16 @@ function init_map() {
       var marker = []; //
       var i;
       for (i = 0; i < data.length; i++) {
-		 data[i].reserved = 'NON'; 
-//if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes 
+		 data[i].reserved = 'NON';
+//if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
 //console.log(marker[i]);
-         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="number">' + data[i].number + '</p> <br/><div class="bouton"><input onclick="onResaClick()" id="resa" type="submit" value="Réserver"/></div>');
+         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="id-velo"> ID VELO' + data[i].number + '</p> <br/>          <div class="bouton">              <input onclick="onResaClick(this)" id="resa" data-veloid="' + data[i].number + '" type="submit" value="Réserver"/>          </div>');
 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
-//marker[i].on('click', onClick); 
+//marker[i].on('click', onClick);
 // pour faire quelquechose au clic sur le marker
-	  //}   
+
+	  //}
       }
    };
 
@@ -57,10 +58,13 @@ function onClick(e) {
 }
 
 function onResaClick(e) {
+  //console.log($( "#number" ).innerText);
    //e.openPopup();
+   var one = e.getAttribute('data-veloid')
+   console.log(one);
 	$( "#register" ).css( "display", "block" );
-	//value=$( "#number" );
-	//console.log(value);
+  $( "#velo-id" ).value = one;
+
 }
 
 $(document).ready(function() {
@@ -78,7 +82,7 @@ $(document).ready(function() {
 //Accéder à ces valeurs comme un objet ou avec les méthodes Storage.getItem () et Storage.setItem ().
 
 //CANVA
-/*class Sign{ 
+/*class Sign{
 this.canvas = document.getElementById('myCanvas');
 this.infValidation = $('#rreserved-bike');
 this.ctx = this.canvas.getContext('2d');
