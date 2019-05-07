@@ -60,10 +60,10 @@ function onClick(e) {
 function onResaClick(e) {
   //console.log($( "#number" ).innerText);
    //e.openPopup();
-   var one = e.getAttribute('data-veloid')
-   console.log(one);
+   var idvelov = e.getAttribute('data-veloid');
+   //console.log(idvelov);
 	$( "#register" ).css( "display", "block" );
-  $( "#velo-id" ).value = one;
+  $( "#velov-id" ).val(idvelov);
 
 }
 
