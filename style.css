@@ -104,7 +104,7 @@ html, body, #map {
 	text-align: center;
 }
 
-.leaflet-popup-content-wrapper, {
+.leaflet-popup-content-wrapper {
 	background: white;
 }
 
@@ -187,8 +187,8 @@ html, body, #map {
 
 @media all and (max-width: 1000px) {
 
-#carrousel {
-}
+/* #carrousel {
+} */
 	
 #carrousel ul li img  {
 	width: 100%;
@@ -231,14 +231,13 @@ html, body, #map {
 		max-width: 300px;
 		text-align: center;
 }
+}
 
-.leaflet-container 
+/*.leaflet-container 
 .leaflet-touch 
 .leaflet-retina 
 .leaflet-safari 
 .leaflet-fade-anim 
 .leaflet-grab 
 .leaflet-touch-drag 
-.leaflet-touch-zoom
-	
-}
+.leaflet-touch-zoom */
