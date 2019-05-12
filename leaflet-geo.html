@@ -45,13 +45,6 @@
 function init_map() {
 	map = L.map('map').setView([44.86,  -0.65, - 2.4], 6);
         
-/*L.tileLayer('http://wxs.ign.fr/ihlnb9fa3gf5z3ti0ays7zrj/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGN&format=image/jpeg&style=normal',
-{
-	minZoom:0,
-    maxZoom:18,
-    tileSize:256
-}).addTo(map);*/
-
 L.tileLayer('http://wxs.ign.fr/go6t04lhhazkrms3fgfzw1f0/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGN&format=image/jpeg&style=normal',
 {
     minZoom:0,

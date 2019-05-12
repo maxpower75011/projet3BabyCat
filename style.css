@@ -141,7 +141,7 @@ html, body, #map {
     top: -500px;
     /*float: right;*/
     z-index: 10000;
-	left: -1px;
+	/*left: -1px;*/
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	display:none;
@@ -171,6 +171,12 @@ html, body, #map {
     box-shadow: 0 3px 0 rosybrown;
 }
 
+/*-- Footer --*/
+
+#copyright {
+    text-align: center;
+}
+
 #footer {
 	width: 100%;
     background-color: #425066;
@@ -184,15 +190,66 @@ html, body, #map {
 }
 
 /*--- MEDIA QUERIES (RESPONSIVE) BREAKPOINTS ---*/
+/*--IPHONE--*/
+@media all and (max-width: 420px){
 
+.conteneur {
+	width: 380px;	
+}
+
+#carrousel {
+	max-width: 310px;
+	height: 150px;
+	margin: 0;
+}
+	
+#register {
+	max-width: 310px;
+}
+	
+#mapid {
+		max-width: 310px;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+}
+}
+
+/*--IPAD--*/
+
+@media (min-width: 768px) {
+	
+.conteneur {
+	width: 100%;	
+}
+	
+#carrousel {
+	max-width: 600px;
+	height: 200px;
+	margin: 0;
+	padding-bottom: 150px;
+	}
+	
+#register {
+	max-width: 300px;
+}
+	
+#mapid {
+		max-width: 700px;
+		text-align: center !important;
+}
+}
+
+/*-- Grand format --*/
 @media all and (max-width: 1000px) {
 
-/* #carrousel {
-} */
+#carrousel {
+	text-align: center;
+}
 	
 #carrousel ul li img  {
 	width: 100%;
-	margin: 1px;
+	/*margin: 1px;*/
 }
 
 #register {
@@ -211,25 +268,6 @@ html, body, #map {
 	
 #map {
 	touch-action: pan-x pan-y;
-}
-}
-
-
-@media all and (max-width: 380px){
-
-#carrousel {
-	max-width: 300px;
-	height: 150px;
-	margin: 0;
-	}
-	
-#register {
-	max-width: 300px;
-}
-	
-#mapid {
-		max-width: 300px;
-		text-align: center;
 }
 }
 

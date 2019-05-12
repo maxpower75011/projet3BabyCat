@@ -12,3 +12,24 @@ console.log('chat')
 //    event.target.time = "";
 //    }, 500);
 //  }, false);
+
+//CANVA
+/*class Sign{
+this.canvas = document.getElementById('myCanvas');
+this.infValidation = $('#rreserved-bike');
+this.ctx = this.canvas.getContext('2d');
+this.paint = (e) => {
+	this.ctx.lineTo(e.offsetX, e.offsetY);
+	this.ctx.stroke();
+}}
+
+canvasSign(){
+	this.canvas.addEventListener(type:'pointerdown', listener(e) => {
+		this.ctx.beginPath();
+		this.canvas.addEventListener(type:"mousemove", this.paint, options:false);
+	}
+	)
+	this.canvas.addEventListener(type:'pointerup', listener:(e) =>{
+		this.canvas.removeEventListener(type:'mousemove', this.paint);
+	})
+} */

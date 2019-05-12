@@ -35,7 +35,7 @@ function init_map() {
 //if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
 //console.log(marker[i]);
-         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="id-velo"> ID VELO' + data[i].number + '</p> <br/>          <div class="bouton">              <input onclick="onResaClick(this)" id="resa" data-veloid="' + data[i].number + '" type="submit" value="Réserver"/>          </div>');
+         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="velov"> ID VELO' + data[i].number + '</p> <br/>          <div class="bouton">              <input onclick="onResaClick(this)" id="resa" data-veloid="' + data[i].number + '" type="submit" value="Réserver"/>          </div>');
 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
 //marker[i].on('click', onClick);
 // pour faire quelquechose au clic sur le marker
@@ -60,44 +60,13 @@ function onClick(e) {
 function onResaClick(e) {
   //console.log($( "#number" ).innerText);
    //e.openPopup();
-   var idvelov = e.getAttribute('data-veloid');
-   //console.log(idvelov);
+   var idvelov = e.getAttribute('data-velov');
+   //console.log(velov);
 	$( "#register" ).css( "display", "block" );
-  $( "#velov-id" ).val(idvelov);
+  $( "#velov" ).val(idvelov);
 
 }
 
 $(document).ready(function() {
    init_map();
 });
-
-// reset the color after a short delay
-   /* setTimeout(function() {
-    event. = "";
-    }, 500);
-  }, false); */
-
-//L'API de stockage Web fournit des mécanismes --> navigateurs stockent paires clé / valeur
-//Les clés et les valeurs sont toujours des chaînes (les clés entières seront automatiquement converties en chaînes, exactement comme le font les objets).
-//Accéder à ces valeurs comme un objet ou avec les méthodes Storage.getItem () et Storage.setItem ().
-
-//CANVA
-/*class Sign{
-this.canvas = document.getElementById('myCanvas');
-this.infValidation = $('#rreserved-bike');
-this.ctx = this.canvas.getContext('2d');
-this.paint = (e) => {
-	this.ctx.lineTo(e.offsetX, e.offsetY);
-	this.ctx.stroke();
-}}
-
-canvasSign(){
-	this.canvas.addEventListener(type:'pointerdown', listener(e) => {
-		this.ctx.beginPath();
-		this.canvas.addEventListener(type:"mousemove", this.paint, options:false);
-	}
-	)
-	this.canvas.addEventListener(type:'pointerup', listener:(e) =>{
-		this.canvas.removeEventListener(type:'mousemove', this.paint);
-	})
-} */

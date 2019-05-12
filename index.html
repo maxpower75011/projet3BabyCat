@@ -11,9 +11,9 @@
 <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-<!-- Bootstrap pour responsive -->
-	<link rel="stylesheet" type="text/css" href="./bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="./bootstrap-theme.min.css" />
+<!-- Bootstrap pour responsive
+<link rel="stylesheet" type="text/css" href="./bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./bootstrap-theme.min.css" /> -->
 <!-- Inclut bibliothèque depuis les serveurs de Google -->
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <!-- Typo -->
@@ -39,7 +39,7 @@
 <!-- Carte -->
 <div id="mapid"></div>
 
-	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 
 <div id="register">
 
@@ -72,24 +72,14 @@
 
 <footer id="footer">
 	<div id='print-date'></div>
-	<p>&copy; 2019 @HEMASN</p>
-	<p id="p_footer"> Data de réservation stockée dans le navigateur à l'aide de l'API Html5 WebStorage en dessous du panneau. <br>
-	Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation <br>
-	Une seule réservation à la fois, si nouvelle --> remplace l'autre <br>
-	webStorage - Appels ajax: côté front envoyer informations au serveur -> pas nécessaire pour cela. <br>
+	
+	<button onclick="start()"> Lancer le décompte </button>
+	<div id="bip" class="display"></div>
+	
+	<p id="p_footer">Il vous reste <b> 20:00 </b> minutes <br>
+	Pour terminer votre réservation <br></p>
 
-	Méthode Get Post:envoyer infos au serveur: formulaire qu'il faut que j'envoie pour que le serveur php puisse récupérer infos- delete remove Php, node.js, python
-	sessionStorage
-	mouseMove
-	Stocker la date à laquelle a été reservé le vélo dans le localstorage
-	Avec un setInterval soutraire par la date actuelle = différence
-
-SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!");
-location.reload()},3000);
-document.getElementById('prenom').value = coordonnees.prenom;
-
-
-</p>
+<p id="copyright">&copy; 2019 @HEMASN</p>
 
 </footer>
 
@@ -97,6 +87,5 @@ document.getElementById('prenom').value = coordonnees.prenom;
 <script src="./js/map.js" defer></script>
 <script src="./js/carroussel.js" defer></script>
 <!-- <script src="./js/timer.js" defer></script> -->
-
 </body>
 </html>
