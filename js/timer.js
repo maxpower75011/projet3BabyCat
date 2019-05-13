@@ -64,6 +64,8 @@ function start(){
 sessionStorage.station_name + " par " + localStorage.prenom + '&nbsp;' + localStorage.nom + "</h3>";
 myDate = parseInt(sessionStorage.dateReservation);
 millis = Date.now() - myDate;
+diminuerCompteur();
+document.getElementById("VelosDispo").innerHTML = (sessionStorage.station_Velos) + 'vélos disponibles </div>';
 
 //Data de réservation stockée dans le navigateur à l'aide de l'API Html5 WebStorage en dessous du panneau. <br>
 //Une seule réservation à la fois, si nouvelle, remplace l'autre
