@@ -27,7 +27,7 @@ $p.css('display', 'none'); // on cache les p
 $currentImg.css('display', 'block'); // on affiche seulement l'image courante
 $currentP.css('display', 'block'); // on affiche seulement l'image courante
 
-$carrousel.append('<div class="controlpause"><span class="pause">Pause</span></div>');
+$carrousel.append('<div class="controlpause"><span class="pause">Pause <img src="play-button" id="pause-button"/></span></div>');
 $carrousel.append('<div class="controls"> <span class="prev">Precedent</span> <span class="next">Suivant</span></div>');
 
 
