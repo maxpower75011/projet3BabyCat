@@ -61,6 +61,7 @@ function onResaClick(e) {
    var idvelov = e.getAttribute('data-velov');
    //console.log(velov);
 	$( "#register" ).css( "display", "block" );
+console.log("id" + idvelov);
   $( "#velov" ).val(idvelov);
 
 }
