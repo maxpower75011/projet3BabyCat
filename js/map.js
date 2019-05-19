@@ -35,7 +35,7 @@ function init_map() {
 //if(data[i].status != 'CLOSED') { //Afficher que les stations ouvertes
          marker[i] = new L.Marker([data[i].position.lat, data[i].position.lng]).addTo(mymap);
 //console.log(marker[i]);
-         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="velov"> ID VELO' + data[i].number + '</p> <br/>          <div class="bouton">              <input onclick="onResaClick(this)" id="resa" data-veloid="' + data[i].number + '" type="submit" value="Réserver"/>          </div>');
+         marker[i].bindPopup('status:'+data[i].status + '<br/>' + data[i].name + '<br/> Vélo reservé : ' + data[i].reserved +  '<br/> Vélos dispos : ' + data[i].available_bikes + '<br/> <p id="velov"> ID VELO' + data[i].number + '</p> <br/>          <div class="bouton">              <input onclick="onResaClick(this)" id="resa" data-velov="' + data[i].number + '" type="submit" value="Réserver"/>          </div>');
 // corriger le input type pour enlever le onclick $('#resa').on('click', onResaClick);
 //marker[i].on('click', onClick);
 // pour faire quelquechose au clic sur le marker //}
@@ -58,11 +58,10 @@ function onClick(e) {
 function onResaClick(e) {
   //console.log($( "#number" ).innerText);
    //e.openPopup();
-   var idvelov = e.getAttribute('data-velov');
+	var idvelov = e.getAttribute('data-velov');
    //console.log(velov);
 	$( "#register" ).css( "display", "block" );
-console.log("id" + idvelov);
-  $( "#velov" ).val(idvelov);
+    $( "#velov-register" ).val(idvelov);
 
 }
 

@@ -5,7 +5,7 @@ document.getElementById('stockage').onclick = function() {
 	var coordonnees = {
 		nom:document.getElementById('nom').value,
 		prenom:document.getElementById('prenom').value,
-		velov:document.getElementById('velov').value,
+		velov:document.getElementById('velov-register').value,
 	};
 		localStorage.setItem('coord',JSON.stringify(coordonnees));
 		alert("Mémorisation effectuée");
@@ -21,7 +21,7 @@ document.getElementById('lecture').onclick = function() {
 		
 		document.getElementById('nom').value = coordonnees.nom;
 		document.getElementById('prenom').value = coordonnees.prenom;
-		document.getElementById('velov').value = coordonnees.velov;
+		document.getElementById('velov-register').value = coordonnees.velov;
 		alert("Lecture effectuée");
 	} else alert("localStorage n'est pas supporté");
 // Sinon affiche un message d'erreur
