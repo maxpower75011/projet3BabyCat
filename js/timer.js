@@ -76,3 +76,4 @@ document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_statio
 //mouseMove
 //Stocker la date à laquelle a été reservé le vélo dans le localstorage
 //Avec un setInterval soutraire par la date actuelle = différence
+					   !!!
