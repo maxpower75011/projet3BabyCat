@@ -6,6 +6,8 @@
 setTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez !")});
 setTimeout(function() { event.target.time = ""; }, 500); false;
 
+//C'est une référence à l'objet qui a envoyé l'événement.
+
 SetTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez!");
 location.reload()},3000);
 document.getElementById('prenom').value = coordonnees.prenom;
@@ -76,4 +78,3 @@ document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_statio
 //mouseMove
 //Stocker la date à laquelle a été reservé le vélo dans le localstorage
 //Avec un setInterval soutraire par la date actuelle = différence
-					   !!!
