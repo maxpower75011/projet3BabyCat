@@ -24,10 +24,10 @@ function refreshData(){
   	printDate.textContent = dateStorage;
 }
 
-myDate = parseInt(sessionStorage.dateReservation);
-millis = Date.now() - myDate;
-diminuerCompteur();
-document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_station) + ' velo'
+//myDate = parseInt(sessionStorage.dateReservation);
+//millis = Date.now() - myDate;
+//diminuerCompteur();
+//document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_station) + ' velo'
 
 var x = setTimeout("instructions", délai en milisecondes).
 
@@ -59,6 +59,7 @@ function bip() {
         document.getElementById("bip").innerHTML = counter + " secondes restantes";
     }	
 }
+					   
 function start(){
   intervalId = setInterval(bip, 1000);
 }
@@ -72,10 +73,8 @@ document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_statio
 //Data de réservation stockée dans le navigateur à l'aide de l'API Html5 WebStorage en dessous du panneau. <br>
 //Une seule réservation à la fois, si nouvelle, remplace l'autre
 //webStorage - Appels ajax: côté front envoyer informations au serveur -> pas nécessaire pour cela. <br>
-
 //Méthode Get Post:envoyer infos au serveur: formulaire qu'il faut que j'envoie pour que le serveur php puisse récupérer infos- delete remove Php, node.js, python
 //sessionStorage
 //mouseMove
 //Stocker la date à laquelle a été reservé le vélo dans le localstorage
 //Avec un setInterval soutraire par la date actuelle = différence
-					   //
