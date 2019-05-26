@@ -1,4 +1,4 @@
-//Données de réservation stockées dans navigateur avec API Html5 WebStorage et affichées dans footer
+//Data réservation stockée dans navigateur avec API Html5 WebStorage et affichées dans footer
 //Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation 
 //Date() retourne une chaine de caractères
 //Date.now() retourne un timestamp: nombre qui indique le nombre de millisecondes passées depuis le 1/1/1970
