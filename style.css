@@ -190,12 +190,15 @@ html, body, #map {
     color: ghostwhite;
 }
 
-#p_footer {
+.p_footer {
 	text-align: center;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
+#demo {
+	text-align: center;
+}
 /*--- MEDIA QUERIES (RESPONSIVE) BREAKPOINTS ---*/
 /*--IPHONE--*/
 @media all and (max-width: 420px){
