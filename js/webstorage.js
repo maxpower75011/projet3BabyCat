@@ -8,7 +8,10 @@ document.getElementById('stockage').onclick = function() {
 		velov:document.getElementById('velov-register').value,
 	};
 		localStorage.setItem('coord',JSON.stringify(coordonnees));
-		alert("Mémorisation effectuée");
+		window.setTimeout(function(){
+			alert("OK")
+		},3000);
+		//alert("Mémorisation effectuée");
 	} else alert("localStorage n'est pas supporté");
 // Sinon affiche un message d'erreur
 };
