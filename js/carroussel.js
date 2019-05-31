@@ -100,7 +100,7 @@ function slideImg(){
        // alert("pressed");
     }
     slideImg(); // relance la fonction à la fin
-   }, 2000); // on définit l'intervalle à 7000 millisecondes (7s)
+   }, 2000); // on définit l'intervalle à 2 secondes (7s)
 }
 
 slideImg(); // enfin, on lance la fonction une première fois
