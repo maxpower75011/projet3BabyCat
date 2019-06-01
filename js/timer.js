@@ -63,12 +63,32 @@ function bip() {
 function start(){
   intervalId = setInterval(bip, 1000);
 }
-
+					   
+//Autre essai:
 sessionStorage.station_name + " par " + localStorage.prenom + '&nbsp;' + localStorage.nom + "</h3>";
 myDate = parseInt(sessionStorage.dateReservation);
 millis = Date.now() - myDate;
 diminuerCompteur();
 document.getElementById("AvailableBike").innerHTML = (sessionStorage.bike_station) + 'vélos </div>';
+					   
+diminuerCompteur = function () {
+	if (millis < 1200000) {
+		setTimeout(function() {
+			millis = Date.now() - myDate;
+			tempsLitteral(1200000 - millis);
+			document.getElementById(idMessage).innerHTML = tempsLitteral(1200000 - millis);
+			diminuerCompteur(millis);
+		}, 1000);
+	}	else {
+		sessionStorage.dateReservation = 0;
+		myDate = 0;
+	}
+}
+
+tempsLitteral = function (milliSeconde) {
+	var s, m, seconde;
+	var texteTemps = "";
+}
 
 //Data de réservation stockée dans le navigateur à l'aide de l'API Html5 WebStorage en dessous du panneau. <br>
 //Une seule réservation à la fois, si nouvelle, remplace l'autre
