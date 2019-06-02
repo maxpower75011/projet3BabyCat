@@ -1,0 +1,1 @@
+//Il faut faire un appel Ajax par rapport à l'API JC Decaux et utliser Real Time Data en mettant Nantes dans l'appel --> Utiliser Fetch ?
