@@ -1,4 +1,4 @@
-/*- Body -*/
+/*--- Body ---*/
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -27,7 +27,7 @@ h1 {
 	padding: 10px;
 }
 
-/*- Carrousel -*/
+/*--- Carrousel ---*/
 
 #carrousel{
     position:relative;
@@ -78,9 +78,9 @@ h1 {
     border-style: none;
     border-radius: 15px;
     box-shadow: 0 2px 0 rosybrown;
-	cursor: pointer;
-	
+	cursor: pointer;	
 }
+
 .next {
 	float: right;
 	padding: 5px;
@@ -91,14 +91,37 @@ h1 {
 	cursor:pointer;
 }
 
-/*- Html, Body, Map -*/
+.controlpause {
+	text-align: center;
+	color: ghostwhite;
+    display: block;
+    position: relative;
+	padding: 10px;
+	top: 130%;
+}
+
+.pause {
+	text-align: center;
+	padding: 5px;
+    background-color: rgb(0, 90, 121);
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: 0 2px 0 rgb(255, 217, 217);
+	cursor:pointer;
+}
+
+#pause-button {
+	width: 5px;
+}
+
+/*-- Html, Body, Map --*/
 
 html, body, #map {
     height: 100%;
     /*--width: 100vw;--*/
 }
 
-/*- Map -*/
+/*-- Map --*/
 
 .leaflet-popup-content-wrapper {
 	text-align: center;
