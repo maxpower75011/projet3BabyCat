@@ -4,7 +4,7 @@
 //Date.now() retourne un timestamp: nombre qui indique le nombre de millisecondes passées depuis le 1/1/1970
 
 setTimeout(function(){alert("Vous avez dépassé 20 min...Réessayez !")});
-setTimeout(function() { event.target.time = ""; }, 500); false;
+setTimeout(function() { event.target.time = ""; }, 1200000); false;
 
 //C'est une référence à l'objet qui a envoyé l'événement
 
@@ -19,7 +19,7 @@ $("#stockage").onclick = function () {
 }
 
 function refreshData(){
-	let printDate  = document.getElementById('print-date'); //time plutôt que date
+	let printDate = document.getElementById('print-date'); //time plutôt que date
 	let dateStorage = sessionStorage.getItem('dateRes');
   	printDate.textContent = dateStorage;
 }
@@ -90,6 +90,7 @@ tempsLitteral = function (milliSeconde) {
 	var texteTemps = "";
 }
 
+//La propriété innerHTML permet de récupérer tout le contenu HTML d'un élément du DOM
 //Data de réservation stockée dans le navigateur à l'aide de l'API Html5 WebStorage en dessous du panneau. <br>
 //Une seule réservation à la fois, si nouvelle, remplace l'autre
 //webStorage - Appels ajax: côté front envoyer informations au serveur -> pas nécessaire pour cela. <br>
@@ -98,12 +99,6 @@ tempsLitteral = function (milliSeconde) {
 //mouseMove
 //Stocker la date à laquelle a été reservé le vélo dans le localstorage
 //Avec un setInterval soutraire par la date actuelle = différence
-
-//HTML					   
-<body>
-<p id="demo"></p>
-<button></button>
-</body>					   
 					   
 //NOUVEL ESSAI TIMER					   
 //// Set the date we're counting down to
@@ -132,4 +127,14 @@ var x = setInterval(function() {
   }
 }, 1000);
 					   
-					   timer@
+//1_ Quand on clique sur réserver après avoir remplit tous les champs +canvas --> Décompte de 20 minutes dans Footer
+
+//2_ Après 20 minutes --> Expiration --> les champs se remettent à 0 et vélo est de nouveau libre
+
+//3_Si on refresh la page: champs remis à 0
+					   
+					   
+					   
+					   
+					   
+									   
