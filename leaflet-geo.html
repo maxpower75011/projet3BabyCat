@@ -4,58 +4,31 @@
 <title>Leaflet - Marker Click Event</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
    crossorigin=""/>
 <!--[if lte IE 8]><link rel="stylesheet" href="../dist/leaflet.ie.css" /><![endif]-->
-	
-<style>
-#map { 
-	height: 600px; 
-}
-
-#content {
-       position: fixed;
-       right: 0px;
-       top: 0px;
-       width :200px;
-       height:600px;
-       background-color: #fff;
-       padding: 20px;
-       font:'Source Sans Pro', sans-serif;
-      }
-
-.leaflet-container {
-    font:'Source Sans Pro', sans-serif !important;
-}
-
-.leaflet-popup-content {
-    font:'Source Sans Pro', sans-serif !important;
-}
-
-</style>
 </head>
 	
 <body>
-<div id="map"></div>
-<div id="mapid"></div>
-
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+	<div id="map"></div>
+	<div id="mapid"></div>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
-<script type="text/javascript">
+	<script type="text/javascript">
     $(document).ready(function () {
         init_map();
         add_marker();
     });
     var map;
 
-function init_map() {
+	function init_map() {
 	map = L.map('map').setView([44.86,  -0.65, - 2.4], 6);
         
-L.tileLayer('http://wxs.ign.fr/go6t04lhhazkrms3fgfzw1f0/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGN&format=image/jpeg&style=normal',
+	L.tileLayer('http://wxs.ign.fr/go6t04lhhazkrms3fgfzw1f0/geoportail/wmts?service=WMTS&request=GetTile&version=1.0.0&tilematrixset=PM&tilematrix={z}&tilecol={x}&tilerow={y}&layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGN&format=image/jpeg&style=normal',
 {
     minZoom:0,
     maxZoom:18,
@@ -64,8 +37,8 @@ L.tileLayer('http://wxs.ign.fr/go6t04lhhazkrms3fgfzw1f0/geoportail/wmts?service=
 
 }
 
-function add_marker() {
-	var points = [
+		function add_marker() {
+			var points = [
             ["P1", 44.8637064,-0.6563523, '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -147,6 +120,5 @@ function add_marker() {
     }
 
 </script>
-
 </body>
 </html>

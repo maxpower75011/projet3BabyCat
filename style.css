@@ -173,6 +173,31 @@ html, body, #map {
 	text-align: center;
 }
 
+/*-- Styles Leaflet-geo.html --*/
+
+#map { 
+	height: 600px; 
+}
+
+#content {
+       position: fixed;
+       right: 0px;
+       top: 0px;
+       width :200px;
+       height:600px;
+       background-color: #fff;
+       padding: 20px;
+       font:'Source Sans Pro', sans-serif;
+      }
+
+.leaflet-container {
+    font:'Source Sans Pro', sans-serif !important;
+}
+
+.leaflet-popup-content {
+    font:'Source Sans Pro', sans-serif !important;
+}
+
 /*-- Canvas --*/
 
 #myCanvas {
@@ -223,6 +248,7 @@ html, body, #map {
 	text-align: center;
 }
 /*--- MEDIA QUERIES (RESPONSIVE) BREAKPOINTS ---*/
+
 /*--IPHONE--*/
 @media all and (max-width: 420px){
 

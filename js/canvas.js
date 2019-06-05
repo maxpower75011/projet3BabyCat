@@ -127,10 +127,8 @@
                 context.closePath();
                 context.stroke();
             }
-        }
-			
+        }		
 });
-
 
 //Exemple pour les brush etc
 //   canvas.Brush.color:= clred;
