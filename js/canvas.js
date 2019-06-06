@@ -56,11 +56,12 @@
 
 //Par la suite: permettre à l'utilisateur de choisir avec quelle couleur il va signer ou dégradés
 
+
         $( document ).ready(function() {
-        var canvasDiv = document.getElementById('#myCanvas');
-        var canvas = document.createElement('#canvas');
-        canvas.setAttribute('width', "200");
-        canvas.setAttribute('height', "100");
+        var canvasDiv = document.getElementById('canvasDiv');
+        var canvas = document.createElement('canvas');
+        canvas.setAttribute('width', "500");
+        canvas.setAttribute('height', "200");
         canvas.setAttribute('id', 'canvas');
         canvasDiv.appendChild(canvas);
         if(typeof G_vmlCanvasManager != 'undefined') {
@@ -112,7 +113,7 @@
         function redraw(){
             context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
              
-            context.strokeStyle = "#346187";
+            context.strokeStyle = "#333";
             context.lineJoin = "round";
             context.lineWidth = 3;
              
@@ -127,7 +128,8 @@
                 context.closePath();
                 context.stroke();
             }
-        }		
+        }
+			
 });
 
 //Exemple pour les brush etc
