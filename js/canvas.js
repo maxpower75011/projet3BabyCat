@@ -20,7 +20,7 @@
 //	this.ctx = this.canvas.getContext('2d');
 //	this.paint = (e) => {
 //	this.ctx.lineTo(e.offsetX, e.offsetY);
-//	this.ctx.stroke();
+//	this.ctx.s  troke();
 //}}
 
 //canvasSign(){
