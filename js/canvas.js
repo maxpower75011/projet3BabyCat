@@ -20,7 +20,7 @@
 //	this.ctx = this.canvas.getContext('2d');
 //	this.paint = (e) => {
 //	this.ctx.lineTo(e.offsetX, e.offsetY);
-//	this.ctx.s  troke();
+//	this.ctx.stroke();
 //}}
 
 //canvasSign(){
@@ -128,8 +128,7 @@
                 context.closePath();
                 context.stroke();
             }
-        }
-			
+        }			
 });
 
 //Exemple pour les brush etc
