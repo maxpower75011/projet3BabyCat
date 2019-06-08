@@ -14,32 +14,29 @@
 		<!-- Typo -->
 		<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-		<!-- Fichiers JS
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>-->
+		<!-- Fichiers JS -->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	</head>
-	
 	
   	<body>
 		<header id="header">
 			<h1>Velo'v</h1>
 		</header>
 
-		<div class="conteneur">
+	<div class="conteneur">
 		
 		<!-- Carrousel -->
 	  	<div id="carrousel">
 			<div id="carouselButtons">
-				<button class="playButton" type="button">
+			<!--<button class="playButton" type="button">
 					<span class="play" src="play-button"></span>
-				</button>
-				<button class="pauseButton" type="button">
-					<span class="pause" src="pause-button"></span>
-				</button>
-			</div>
+				</button>-->
+			<!--<button>
+					<span class="pause"><img src="pause-button.png" id="img-pause"></span>
+				</button>-->
+		 	</div>
 
-<!-- balises section / article structurer la page -->
-
+<!-- balises section / aticle structurer la page -->
     		<ul>
         		<li><img src="img/velo1.jpg"/><p class="text_carrousel">L’application indispensable à tous les utilisateurs du service Vélo’v. Ce service est disponible à Nantes et dans d'autres grandes villes.</p></li>
         		<li><img src="img/velo2.jpg" /><p class="text_carrousel">Localisez votre Velo'v le plus proche et s'il est disponible, une fois à l'endroit indiqué, réserver le, et c'est parti pour un tour !</p></li>
@@ -52,7 +49,7 @@
 
 			<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 
-		<div id="register">
+	   <div id="register">
 
 		<!-- WebStorage -->
 		<div id="wrap">
@@ -80,18 +77,19 @@
 		</form>
 
 		</div>
-	  </div>
+	   </div>
 	</div>
 
-<footer id="footer">
+  <footer id="footer">
 	<div id='print-date'></div>
+	
 		<p class="p_footer">Il vous reste</p>
 		<p id="demo"><b> 20:00 </b></p><br>
 		<p class="p_footer">minutes</p>
 		<p class="p_footer">Pour terminer votre réservation</p>
-
-<p id="copyright">&copy; 2019 - HEMASN</p>
-</footer>
+	
+	<p id="copyright">&copy; 2019 - HEMASN</p>
+  </footer>
 
 <script src="./js/webstorage.js"></script>
 <script src="./js/map.js" defer></script>

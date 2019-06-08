@@ -1,4 +1,4 @@
-//Carrousel: https://openclassrooms.com/fr/courses/1567926-un-site-web-dynamique-avec-jquery/1569419-tp-le-carrousel
+//Carrousel: un-site-web-dynamique-avec-jquery/1569419-tp-le-carrousel
 
 	$(window).keydown(function(e){ //dans la fenêtre, à l'appui sur une touche du clavier
 		switch (e.keyCode) {
@@ -27,14 +27,15 @@ $p.css('display', 'none'); // on cache les p
 $currentImg.css('display', 'block'); // on affiche seulement l'image courante
 $currentP.css('display', 'block'); // on affiche seulement l'image courante
 
-$carrousel.append('<div class="controlpause"><span class="pause">Pause <img src="play-button" id="pause-button"/></span></div>');
-$carrousel.append('<div class="controls"> <span class="prev">Precedent</span> <span class="next">Suivant</span></div>');
+$carrousel.append('<div class="controlpause"><span class="pause">Pause <img src=./img/pause-button.png"" id="img-pause"/></span></div>');
 
+//<span class="pause">Pause <img src=./img/pause-button.png"" id="img-pause"/></span>
+				  
+$carrousel.append('<div class="controls"><span class="prev">Precedent</span> <span class="next">Suivant</span></div>');
 
 $('.next').click(function(){ // image suivante -> ceci est un event listener
     
     i++; // on incrémente le compteur
-
     if( i <= indexImg ){
         $img.css('display', 'none'); // on cache les images
         $currentImg = $img.eq(i); // on définit la nouvelle image
@@ -68,10 +69,10 @@ $('.prev').click(function(){ // image précédente
 });
 
 $('.pause').click(function(){ // image en pause
-
-    if (pressed == 0) {
+     if (pressed == 0) {
         pressed = 1;
-    } else {
+     } 
+	 else {
         pressed = 0;
     }
 });
@@ -79,10 +80,10 @@ $('.pause').click(function(){ // image en pause
 function slideImg(){
     setTimeout(function(){ // on utilise une fonction anonyme
 
-        if(i < indexImg){ // si le compteur est inférieur au dernier index
-        i++; // on l'incrémente
+    if(i < indexImg){ // si le compteur est inférieur au dernier index
+       i++; // on l'incrémente
     }
-    else{ // sinon, on le remet à 0 (première image)
+	else{ // sinon, on le remet à 0 (première image)
         i = 0;
     }
     if (pressed == 0) {

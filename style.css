@@ -55,7 +55,6 @@ h1 {
 }
 
 .text_carrousel {
-	margin-top: -150px;
     margin-left: 80px;
     margin-right: 80px;
 	margin-bottom: 30px;
@@ -72,6 +71,8 @@ h1 {
 	top: 50%;
 }
 
+	/*--bouton précédent--*/
+
 .prev {
     padding: 5px;
     background-color: lightblue;
@@ -80,6 +81,8 @@ h1 {
     box-shadow: 0 2px 0 rosybrown;
 	cursor: pointer;	
 }
+
+	/*--bouton suivant--*/
 
 .next {
 	float: right;
@@ -90,6 +93,8 @@ h1 {
     box-shadow: 0 2px 0 rosybrown;
 	cursor:pointer;
 }
+
+	/*--bouton pause--*/
 
 .controlpause {
 	text-align: center;
@@ -102,16 +107,18 @@ h1 {
 
 .pause {
 	text-align: center;
-	padding: 5px;
+	padding: 8px;
     background-color: rgb(0, 90, 121);
     border-style: none;
     border-radius: 15px;
     box-shadow: 0 2px 0 rgb(255, 217, 217);
 	cursor:pointer;
+	z-index: 1000;
 }
 
-#pause-button {
-	width: 5px;
+#img-pause {
+	width: 3px;
+	height: 3px;
 }
 
 /*-- Html, Body, Map --*/
@@ -209,6 +216,7 @@ html, body, #map {
 }
 
 /*-- Formulaire --*/
+
 .nom , .prenom , #velov-register {
 	border: 1px solid rosybrown;
 	border-radius: 3px;
@@ -257,17 +265,17 @@ html, body, #map {
 }
 
 #carrousel {
-	max-width: 310px;
-	height: 150px;
+	max-width: 300px;
+	height: 200px;
 	margin: 0;
+	padding-bottom: 150px;
 }
 	
-	
 #mapid {
-		max-width: 310px;
-		text-align: center;
-		padding-left: 5px;
-		padding-right: 5px;
+	max-width: 310px;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 }
 
@@ -295,13 +303,11 @@ html, body, #map {
 @media all and (max-width: 1000px) {
 
 #carrousel {
-	text-align: center;
+	/*--text-align: center;--*/
 }
 	
-#carrousel ul li img  {
-	width: 100%;
-	/*margin: 1px;*/
-}
+/*--#carrousel ul li img  {
+	width: 100%;} --*/
 
 #register {
     /*position: relative;*/
