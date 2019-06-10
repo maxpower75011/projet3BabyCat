@@ -131,10 +131,4 @@ var x = setInterval(function() {
 
 //2_ Après 20 minutes --> Expiration --> les champs se remettent à 0 et vélo est de nouveau libre
 
-//3_Si on refresh la page: champs remis à 0
-					   
-					   
-					   
-					   
-					   
-									   
+//3_Si on refresh la page: champs remis à 0									   

@@ -56,6 +56,8 @@
 
 //Par la suite: permettre à l'utilisateur de choisir avec quelle couleur il va signer ou dégradés
 
+//context = document.getElementById('canvasInAPerfectWorld').getContext("2d");
+
 
         $( document ).ready(function() {
         var canvasDiv = document.getElementById('canvasDiv');
