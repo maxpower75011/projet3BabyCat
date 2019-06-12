@@ -1,3 +1,23 @@
+var dateEnd = Date.now() + 1000 * 60 * 20;
+
+var interval = setInterval(function () {
+  var reste = dateEnd - Date.now();
+  
+  var secondes = Math.ceil(reste / 1000);
+  
+  var minutes = Math.floor(secondes / 60);
+  
+  secondes = secondes % 60;
+  
+  $("#timer").text(minutes + " " + secondes)
+}, 1000);
+
+setTimeout(function() {
+  clearInterval(interval);
+}, 1000 * 60 * 20)
+
+
+
 //Data réservation stockée dans navigateur avec API Html5 WebStorage et affichées dans footer
 //Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation 
 //Date() retourne une chaine de caractères
@@ -130,21 +150,3 @@
 //1_ Quand on clique sur réserver après avoir remplit tous les champs +canvas --> Décompte de 20 minutes dans Footer
 //2_ Après 20 minutes --> Expiration --> les champs se remettent à 0 et vélo est de nouveau libre
 //3_Si on refresh la page: champs remis à 0	
-
-var dateEnd = Date.now() + 1000 * 60 * 20;
-
-var interval = setInterval(function () {
-  var reste = dateEnd - Date.now();
-  
-  var secondes = Math.ceil(reste / 1000);
-  
-  var minutes = Math.floor(secondes / 60);
-  
-  secondes = secondes % 60;
-  
-  $("#timer").text(minutes + " " + secondes)
-}, 1000);
-
-setTimeout(function() {
-  clearInterval(interval);
-}, 1000 * 60 * 20)
