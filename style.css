@@ -57,7 +57,7 @@ h1 {
 .text_carrousel {
     margin-left: 80px;
     margin-right: 80px;
-	margin-bottom: 30px;
+	margin-top: -330px;
 	color: ghostwhite;
 	text-align: center;
 	z-index: 1000;

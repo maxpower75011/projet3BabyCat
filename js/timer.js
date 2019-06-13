@@ -1,3 +1,10 @@
+//Code Js pour le bouton
+$("#stockage").onclick = function () {
+  sessionStorage.setItem('dateEnd', Date());
+  refreshData();
+}
+
+//Timer
 var dateEnd = Date.now() + 1000 * 60 * 20;
 
 var interval = setInterval(function () {
@@ -32,12 +39,6 @@ setTimeout(function() {
 //location.reload()},3000);
 //document.getElementById('prenom').value = coordonnees.prenom;
 
-//Code Js pour le bouton
-//$("#stockage").onclick = function () {
-//  sessionStorage.setItem('dateRes', Date());
-//  refreshData();
-//}
-
 //function refreshData(){
 //	let printDate = document.getElementById('print-date'); //time plutôt que date
 //	let dateStorage = sessionStorage.getItem('dateRes');
@@ -62,10 +63,9 @@ setTimeout(function() {
 //L'action sera recommencée jusqu'à ce que l'on quitte la page ou clearInterval exécutée.
 
 //var x = setInterval(mafonction, 1200000);
-...
 //clearInterval(x);
 					   
-//Code source:
+//Code:
 //var counter = 10;
 //var intervalId = null;
 //function finish() {
