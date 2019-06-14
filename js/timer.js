@@ -1,10 +1,7 @@
 //Code Js pour le bouton
-$("#stockage").onclick = function () {
+$("#stockage").on('click' , function () {
   sessionStorage.setItem('dateEnd', Date());
-  refreshData();
-}
 
-//Timer
 var dateEnd = Date.now() + 1000 * 60 * 20;
 
 var interval = setInterval(function () {
@@ -23,7 +20,18 @@ setTimeout(function() {
   clearInterval(interval);
 }, 1000 * 60 * 20)
 
+})
 
+//var x = setInterval(mafonction, 1200000);
+//clearInterval(x);
+
+//function bip() {
+//    counter--;
+//    if(counter == 0) finish();
+//    else {	
+//        document.getElementById("bip").innerHTML = counter + " secondes restantes";
+//    }	
+//}
 
 //Data réservation stockée dans navigateur avec API Html5 WebStorage et affichées dans footer
 //Affiche en permanence l'état de la réservation (s'il y en a) avec un décompte dynamique du temps restant avant expiration de la réservation 
