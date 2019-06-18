@@ -215,6 +215,16 @@ html, body, #map {
 	text-align: center;
 }
 
+#clearCanvasSimple {
+	padding: 10px;
+    background-color: lightblue;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 3px;
+    font-weight: bold;
+    box-shadow: 0 3px 0 rosybrown;
+}
+
 /*-- Formulaire --*/
 
 .nom , .prenom , #velov-register {
