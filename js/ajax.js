@@ -26,6 +26,6 @@ function afficher(reponse) {
 }
 
 //fonction AJAX générique
-ajaxGet(" https://api.jcdecaux.com/vls/v1/stations?contract=Nantes&apiKey={api_key}", afficher);
+ajaxGet(" https://api.jcdecaux.com/vls/v1/stations?contract=Nantes&apiKey=0ae98a85f566e50063913e55f95b55366337fba6", afficher);
 
 //retrouver clé d'API associée à mon compte et l'insérer dans api_key
