@@ -58,7 +58,6 @@
 
 //context = document.getElementById('canvasInAPerfectWorld').getContext("2d");
 
-
         $( document ).ready(function() {
         var canvasDiv = document.getElementById('canvasDiv');
         var canvas = document.createElement('canvas');
@@ -114,7 +113,6 @@
  
         function redraw(){
             context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
-             
             context.strokeStyle = "#333";
             context.lineJoin = "round";
             context.lineWidth = 3;

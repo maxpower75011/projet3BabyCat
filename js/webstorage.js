@@ -1,7 +1,7 @@
-// Méthode de stockage
+//Méthode de stockage
 document.getElementById('stockage').onclick = function() {
 	if(typeof localStorage!='undefined' && JSON) {
-// Si le local storage est supporté alors création d'une variable coordonnée avec les infos du formulaire
+//Si le local storage est supporté alors création d'une variable coordonnée avec les infos du formulaire
 	var coordonnees = {
 		nom:document.getElementById('nom').value,
 		prenom:document.getElementById('prenom').value,
@@ -16,7 +16,7 @@ document.getElementById('stockage').onclick = function() {
 // Sinon affiche un message d'erreur
 };
 	
-// Méthode de lecture
+//Méthode de lecture
 //document.getElementById('lecture').onclick = function() {
 //	if(typeof localStorage!='undefined' && JSON) {
 // Si le local storage est supporté alors création d'une variable coordonnée qui récupère les infos stockées dans le local storage
