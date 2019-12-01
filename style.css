@@ -27,12 +27,15 @@ h1 {
 	padding: 10px;
 }
 
+.rs {
+    color: rosybrown;
+}
+
 /*--- Carrousel ---*/
 
 #carrousel{
     position:relative;
     height:400px;
-    /*-width:800px;-*/
 	width:100%;
     margin:auto;
 	padding-bottom: 50px;
@@ -71,8 +74,6 @@ h1 {
 	top: 50%;
 }
 
-	/*--bouton précédent--*/
-
 .prev {
     padding: 5px;
     background-color: lightblue;
@@ -81,8 +82,6 @@ h1 {
     box-shadow: 0 2px 0 rosybrown;
 	cursor: pointer;	
 }
-
-	/*--bouton suivant--*/
 
 .next {
 	float: right;
@@ -94,24 +93,23 @@ h1 {
 	cursor:pointer;
 }
 
-	/*--bouton pause--*/
-
 .controlpause {
 	text-align: center;
 	color: ghostwhite;
-    display: block;
+    /*display: block;*/
     position: relative;
 	padding: 10px;
 	top: 130%;
 }
 
 .pause {
+    content: 'f04c';
 	text-align: center;
 	padding: 8px;
     background-color: rgb(0, 90, 121);
     border-style: none;
     border-radius: 15px;
-    box-shadow: 0 2px 0 rgb(255, 217, 217);
+    box-shadow: 0 2px 0 rosybrown;
 	cursor:pointer;
 	z-index: 1000;
 }
@@ -280,6 +278,15 @@ html, body, #map {
 	margin: 0;
 	padding-bottom: 150px;
 }
+    
+.text_carrousel {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: -185px;
+    color: ghostwhite;
+    text-align: center;
+    z-index: 1000;
+}
 	
 #mapid {
 	max-width: 310px;
@@ -302,7 +309,7 @@ html, body, #map {
 	height: 200px;
 	margin: 0 auto;
 	padding-bottom: 150px;
-	}
+}
 
 #mapid {
 		text-align: center !important;

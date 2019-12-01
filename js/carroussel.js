@@ -27,11 +27,9 @@ $p.css('display', 'none'); // on cache les p
 $currentImg.css('display', 'block'); // on affiche seulement l'image courante
 $currentP.css('display', 'block'); // on affiche seulement l'image courante
 
-$carrousel.append('<div class="controlpause"><span class="pause">Pause <img src=./img/pause-button.png"" id="img-pause"/></span></div>');
-
-//<span class="pause">Pause <img src=./img/pause-button.png"" id="img-pause"/></span>
+$carrousel.append('<div class="controlpause"><span class="pause"><i class="fas fa-pause"></i></span></div>' , '<div class="controls"><span class="prev"><i class="fas fa-caret-left"></i></span> <span class="next"><i class="fas fa-caret-right"></i></span></div>');
 				  
-$carrousel.append('<div class="controls"><span class="prev">Precedent</span> <span class="next">Suivant</span></div>');
+//$carrousel.append('<div class="controls"><span class="prev">Precedent</span> <span class="next">Suivant</span></div>');
 
 $('.next').click(function(){ // image suivante -> ceci est un event listener
     

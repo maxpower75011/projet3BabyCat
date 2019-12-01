@@ -14,18 +14,24 @@
 		<!-- Typo -->
 		<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <!-- Bibliothèque Ajax icônes -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 		<!-- Fichiers JS -->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	</head>
 	
-  	<body>
-		<header id="header">
-			<h1>Velo'v</h1>
-		</header>
+<body>
+    
+    <header id="header">
+        <h1>Velo'v</h1>
+        
+        <a href="https://github.com/thecatemma" class="rs" title="Github"><i class="fab fa-github" alt="GitHub"></i></a>               
+        <a href="https://www.behance.net/hussonemmad23e" class="rs" title="Behance"><i class="fab fa-behance" alt="Behance"></i></a>               
+        <a href="https://www.youtube.com/channel/UCHQyXitCjlQQrSXQCB-fn0w?" class="rs"><i class="fab fa-youtube"></i></a>
+    </header>
 
 	<div class="conteneur">
-		
-<!-- Carrousel -->
+
 	  	<div id="carrousel">
 			<div id="carouselButtons">
 			<!--<button class="playButton" type="button">
@@ -36,7 +42,6 @@
 				</button>-->
 		 	</div>
 
-<!-- balises section / aticle structurer la page -->
     		<ul>
         		<li><img src="img/velo1.jpg"/><p class="text_carrousel">L’application indispensable à tous les utilisateurs du service Vélo’v. Ce service est disponible à Nantes et dans d'autres grandes villes.</p></li>
         		<li><img src="img/velo2.jpg" /><p class="text_carrousel">Localisez votre Velo'v le plus proche et s'il est disponible, une fois à l'endroit indiqué, réserver le, et c'est parti pour un tour !</p></li>
@@ -88,9 +93,8 @@
 
 	  <p class="p_footer">Il vous reste</p>
 	  <h1 id="timer">20:00</h1>
-		<p class="p_footer">minutes pour terminer votre réservation</p>
-	
-	<p id="copyright">&copy; 2019 - HEMASN</p>
+      <p class="p_footer">minutes pour terminer votre réservation</p>
+	  <p id="copyright">&copy; 2020 - HEMASN</p>
   </footer>
 
 <script src="./js/webstorage.js"></script>
@@ -98,5 +102,6 @@
 <script src="./js/carroussel.js" defer></script>
 <script src="./js/canvas.js"></script>
 <script src="./js/timer.js"></script>
+    
 </body>
 </html>
