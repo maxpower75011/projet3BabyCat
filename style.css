@@ -124,6 +124,10 @@ h1 {
     padding: 5px;
 }
 
+.fa-caret-right {
+    padding: 5px;
+}
+
 /*-- Html, Body, Map --*/
 
 html, body, #map {
