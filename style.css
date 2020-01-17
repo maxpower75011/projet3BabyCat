@@ -258,7 +258,6 @@ html, body, #map {
 }
 /*--- MEDIA QUERIES (RESPONSIVE) BREAKPOINTS ---*/
 
-/*--IPHONE--*/
 @media all and (max-width: 420px){
 
 .conteneur {
@@ -289,8 +288,6 @@ html, body, #map {
 }
 }
 
-/*--IPAD--*/
-
 @media (min-width: 768px) {
 	
 .conteneur {
@@ -309,7 +306,6 @@ html, body, #map {
 }
 }
 
-/*-- Grand format --*/
 @media all and (max-width: 1000px) {
 
 #carrousel {
