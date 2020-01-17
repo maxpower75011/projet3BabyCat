@@ -163,7 +163,6 @@ html, body, #map {
 
 #register {
     background: #fff;
-    /*width: 250px;*/
     top: -500px;
     z-index: 10000;
 	text-align: center;
@@ -176,7 +175,7 @@ html, body, #map {
 	text-align: center;
 }
 
-/*-- Styles Leaflet-geo.html --*/
+/*-- Styles Leaflet-geo --*/
 
 #map { 
 	height: 600px; 
