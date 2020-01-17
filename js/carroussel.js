@@ -43,7 +43,8 @@ $('.next').click(function(){ // image suivante -> ceci est un event listener
         $currentP = $img.eq(i); // on définit le nouveau paragraphe
         $currentP.css('display', 'block'); // ensuite on l'affiche
     }
-    else{
+    
+    else {
         i = indexImg; //on donne à i la valeur de l'index de l'image, i++, pas besoin d'incrémenteur, faire un ConsoleLog pour savoir à quoi cela sert
 		}
     });
@@ -61,6 +62,7 @@ $('.prev').click(function(){ // image précédente
         $currentP = $p.eq(i); //on refait la même chose avec les paragraphes, p vaut la valeur de l'incrémental, on prend le i qui correspond à la valeur de l'incémentation 
         $currentP.css('display', 'block'); //on refait la même chose avec les paragraphes
     }
+    
     else{
         i = 0; //pas nécéssaire d'ajouter quelque chose car le i prend la valeur de l'image et ce n'est pas l'image elle-même
     }
