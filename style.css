@@ -76,7 +76,7 @@ h1 {
 }
 
 .prev {
-    padding: 5px;
+    padding: 7px;
     background-color: lightblue;
     border-style: none;
     border-radius: 15px;
@@ -86,7 +86,7 @@ h1 {
 
 .next {
 	float: right;
-	padding: 5px;
+	padding: 7px;
     background-color: lightblue;
     border-style: none;
     border-radius: 15px;
@@ -118,6 +118,10 @@ h1 {
 #img-pause {
 	width: 3px;
 	height: 3px;
+}
+
+.fa-caret-left {
+    padding: 5px;
 }
 
 /*-- Html, Body, Map --*/
