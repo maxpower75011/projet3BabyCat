@@ -138,10 +138,7 @@ html, body, #map {
 
 .leaflet-popup-content-wrapper {
 	text-align: center;
-}
-
-.leaflet-popup-content-wrapper {
-	background: white;
+    background: white;
 }
 
 .bouton input[type=submit] {
