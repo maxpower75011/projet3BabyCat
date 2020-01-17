@@ -262,6 +262,7 @@ html, body, #map {
 #demo {
 	text-align: center;
 }
+
 /*--- MEDIA QUERIES (RESPONSIVE) BREAKPOINTS ---*/
 
 @media all and (max-width: 420px){
