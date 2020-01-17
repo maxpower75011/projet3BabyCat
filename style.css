@@ -192,11 +192,7 @@ html, body, #map {
        font:'Source Sans Pro', sans-serif;
       }
 
-.leaflet-container {
-    font:'Source Sans Pro', sans-serif !important;
-}
-
-.leaflet-popup-content {
+.leaflet-container .leaflet-popup-content {
     font:'Source Sans Pro', sans-serif !important;
 }
 
